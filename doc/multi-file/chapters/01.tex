@@ -1,0 +1,47 @@
+\chapter{Wstęp}
+\label{ch:wstep}
+\hyphenpenalty=10000
+\emergencystretch=\maxdimen
+%% \begin{itemize}
+%% \item wprowadzenie w~problem/zagadnienie
+%% \item osadzenie problemu w~dziedzinie
+%% \item Wprowadzenie
+%% \section{Wprowadzenie}
+Przedmiotem niniejszej pracy jest przedstawienie metody renderowania metodą ray marching dla~problemu renderowania trójwymiarowego terenu.
+%% jest techniką modelowania światła, pozwalająca na~generowanie obrazów...
+%% technika oparta
+Ray marching jest to technika generowania obrazów dla~dwuwymiarowych oraz trójwymiarowych scen.
+Działanie metody ray marching, podobnie do metody ray tracing, polega na~odnalezieniu przecięcia wiązek światła wraz~z~renderowaną sceną.
+Rozwiązania oparte o~wiązki światła dość dobrze odwzorowują rzeczywistość dzięki czemu można w~dość prosty sposób uzyskać fotorealistyczny obraz.
+Techniki tego typu świetnie radzą sobie z~problemami takimi jak odbicia czy~załamania światła, których efekt znacznie trudniej jest osiągnąć w~rozwiązaniach opartych o~rasteryzacje trójkątów.
+Największą wadą tego rodzaju renderowania jest ich złożoność obliczeniowa. w~najprostszym przypadku z~kamery wysyłana jest jedna wiązka odpowiadająca każdemu pikselowi, dla~której trzeba obliczyć przecięcia z całą sceną.
+Czas działania znacząco pogarsza się wraz~z~implementacją cieniowania, odbić światła, przezroczystości, załamania światła, efektów wolumetrycznych i innych działań poprawiających jakość oraz realizm tworzonego obrazu.
+Uwzględniając ilość wykonywanych obliczeń, metody renderowania oparte o~wiązki światła nie nadają się do renderowania obrazów w~czasie rzeczywistym, przy użyciu dostępnego obecnie sprzętu.
+Rozwiązania tego typu idealnie nadają się jednak do zastosowań, w~których nie ma takich ograniczeń czasowych jak np. obrazy czy~filmy.
+
+Technika ray tracing jest analitycznym rozwiązaniem problemu znalezienia przecięcia wiązki z~powierzchnią.
+Oznacza to, że punkt przecięcia można uzyskać przez rozwiązanie wzoru matematycznego, opisującego to przecięcie.
+Pomimo istnienia analitycznych rozwiązań przecięć z~niektórymi powierzchniami (np. z~kulą, z~trójkątem), brak jest rozwiązania
+pozwalającego na~proste znalezienie przecięcia z~dowolną powierzchnią.
+
+Alternatywą dla~metod analitycznych jest technika ray marching. Jest to numeryczna metoda estymacji przecięć
+wiązki światła z~dowolną powierzchnią.
+Technika ta polega na~sukcesywnym przesuwaniu wiązki światła o~daną odległość do momentu przecięcia z~powierzchnią
+Rozwiązanie to jest dość wolne oraz niedokładne, jednak istnieją różnego rodzaje optymalizacje
+pozwalające poprawić dokładność oraz szybkość algorytmu (takie~jak: sphere tracing, bounding spheres, itp.)
+
+%% \item cel pracy
+%% \section{Cel pracy}
+Celem pracy jest utworzenie aplikacji renderującej proceduralnie generowany teren. Użytkownik posiada możliwość poruszania kamerą oraz zmiany parametrów wpływających na~generacje oraz renderowanie terenu.
+
+W przedmiotowy zakresie pracy zostanie przedstawiona metoda proceduralnego generowania
+terenów, która może być wykorzystywana w~obszarach związanych z~tworzeniem filmów, gier komputerowych, animacji itp. Metoda ta zostanie zaimplementowana na~karcie graficznej, w języku programowania GLSL (OpenGL Shading Language) jako jednostka cieniująca fragmentów.
+W pracy zostaną przedstawione graficzne wyniki zastosowania różnych algorytmów oraz ich parametrów. w~dalszej części zostanie poddany analizie sposób działania wykorzystanych algorytmów.
+
+
+%% \item zakres pracy
+%% \section{Zakres pracy}
+%% \item zwięzła charakterystyka rozdziałów
+%% \section {Charakterystyka rozdziałów}
+%% \item jednoznaczne określenie wkładu autora, w~przypadku prac wieloosobowych – tabela z~autorstwem poszczególnych elementów pracy
+%% \end{itemize}
