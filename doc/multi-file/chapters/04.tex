@@ -17,14 +17,38 @@ w~wersji 12.2.0 na~systemie Linux. Kompilacja progamu odbywa się przy pomocy na
 
 \section{Sposób instalacji}
 \subsection{System Linux}
-Przykład kompilacji programu na systememie Ubuntu 22.04
-sudo apt install cmake
-sudo apt install build-essential
-%% sudo apt install mesa-common-de
-v
-%% sudo apt install libxrandr-dev
-sudo apt install xorg-dev
+Przykład kompilacji programu został wykonany przy wykorzystaniu systememu Ubuntu 22.04. Pierwszym krokiem jest instalacja narzędzi takich jak program cmake, kompilator języka C i C++, itp. oraz instalacja wymaganych bibliotek.
+Do tego celu wykorzystane są następujące polecenia
+\lstset{basicstyle=\ttfamily, language=bash}
+\begin{lstlisting}[language=bash]
+  sudo apt install cmake
+  sudo apt install build-essential
+  sudo apt install xorg-dev
+  sudo apt install git
+\end{lstlisting}
 
+Następnym krokiem jest pobranie repozytorium git projektu. Istotnym jest by pobrać repozytorium rekurencyjnie, gdyż dołączone biblioteki zostały dodane do repozytorium jako submoduły. Można tego dokonać poleceniem
+\begin{lstlisting}[language=bash]
+  git clone https://github.com/Rei-sen/raymarch-terrain --recursive
+\end{lstlisting}
+Alternatywnie, jeżeli repozytorium nie zostało pobrane rekurencyjnie można zastosować polecenia
+\begin{lstlisting}[language=bash]
+  git submodule init
+\end{lstlisting}
+a następnie
+\begin{lstlisting}[language=bash]
+  git submodule update
+\end{lstlisting}
+Ostatnim krokiem jest wygenerowanie plików reguł Makefile a następnie
+kompilacja projektu. Generacji plików reguł Makefile można dokonać wywołując następujące polecenie w głównym katalogu projektu
+\begin{lstlisting}[language=bash]
+  cmake -B build -S .
+\end{lstlisting}
+W celu kompilacji należy wykorzystać poniższe polecenie
+\begin{lstlisting}[language=bash]
+  cmake --build build
+\end{lstlisting}
+Końcowy plik wykonywalny o nazwie raymarch-terrain znajduje się w katalogu build.
 \subsection{System Windows}
 
 \subsection{Sposób obsługi}
