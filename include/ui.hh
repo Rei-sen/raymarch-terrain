@@ -20,4 +20,5 @@ private:
   void showCameraTab(Camera &cam);
   void showSettingsTab(Settings &set);
   void showGenerationSettings(GenerationSettings &gen);
+  void showUIHelp();
 };

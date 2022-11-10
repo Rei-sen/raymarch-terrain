@@ -71,8 +71,13 @@ float fbm(vec2 p) {
 
     for (int i = 0; i < layers; i++) {
         sum += getTerrainHeightAtPoint(p) * a;
+        mat2 m = mat2(
+            4.0/5.0, -3.0/5.0,
+            3.0/5.0, 4.0/5.0
+        );
+        p *= m;
         p *= 2.0;
-        a /= 1.5;
+        a /= 2.0;
     }
     return sum;
 }
@@ -132,12 +137,18 @@ void main(void) {
 
   float dist = map(cameraPos.xyz, dir, MIN_DIST, MAX_DIST);
 
+  vec3 endColor;
   if (dist > MAX_DIST - EPSILON) {
-    fragColor = vec4(0.0, 0.0, 0.0, 0.0);
-    return;
+    endColor = vec3(0.95, 0.98, 1.0);
+    // endColor = vec3(1.0);
+  } else {
+    vec3 normal = gradient(cameraPos.xyz + dir * dist);
+    endColor = vec3(max(dot(normal, normalize(vec3(1,2,3))), 0.0)) * vec3(0.86, 0.68, 0.68);
+    vec3 grey = vec3(0.95);
+    endColor = mix(grey, endColor, exp(-0.005 * dist * vec3(1,2,4)));
   }
 
-  vec3 normal = gradient(cameraPos.xyz + dir * dist);
-  fragColor = vec4(vec3(max(dot(normal, normalize(vec3(1,2,3))), 0.0)), 1.0);
+  // endColor = pow(endColor, vec3(1.0/2.2));
+  fragColor = vec4(endColor, 1.0);
 }
 )""

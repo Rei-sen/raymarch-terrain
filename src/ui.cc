@@ -39,15 +39,20 @@ void UI::renderFrame() {
 }
 
 void UI::display(Config &c) {
+  // ImGui::ShowDemoWindow();
   if (ImGui::Begin("Configuration")) {
+    ImGui::BeginGroup();
+    ImGui::BeginChild("Tab view",
+                      ImVec2(0, -ImGui::GetFrameHeightWithSpacing()));
     if (ImGui::BeginTabBar("Tabs")) {
-
       showCameraTab(c.camera);
       showGenerationSettings(c.generation);
       showSettingsTab(c.settings);
-
       ImGui::EndTabBar();
     }
+    ImGui::EndChild();
+    showUIHelp();
+    ImGui::EndGroup();
   }
   ImGui::End();
 }
@@ -95,5 +100,16 @@ void UI::showGenerationSettings(GenerationSettings &gen) {
                      ImGuiSliderFlags_AlwaysClamp);
 
     ImGui::EndTabItem();
+  }
+}
+
+void UI::showUIHelp() {
+  if (ImGui::Button("Show UI Help"))
+    ImGui::OpenPopup("UI Help");
+
+  if (ImGui::BeginPopup("UI Help")) {
+
+    ImGui::ShowUserGuide();
+    ImGui::EndPopup();
   }
 }
