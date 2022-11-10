@@ -50,11 +50,45 @@ W celu kompilacji należy wykorzystać poniższe polecenie
 \end{lstlisting}
 Końcowy plik wykonywalny o nazwie raymarch-terrain znajduje się w katalogu build.
 \subsection{System Windows}
+Pierwszym krokiem instalacji programu na systemie Windows jest pobranie
+repozytorium. Podobnie jak przy instalacji programu na systemie Linux, repozytorium należy pobrać rekurencyjnie, z wszystkimi submodułami.
+Dalszą część instalacji można dokonać w środowisku Visual studio lub
+wykorzystując narzędzie CMake. Oba sposoby zostaną przedstawione poniżej.
+\subsubsection{Instalacja wykorzystując środowisko Visual Studio}
+Przed przystąpieniem do otwarcia projektu należy się upewnić, że
+wsparcie system budowy CMake jest zainstalowane w środowisku Visual Studio.
+Można tego dokonać w instalatorze Visual studio, jak w rysunku \ref{fig:vs-cmake-install}.
 
-\subsection{Sposób obsługi}
+\begin{figure}
+\centering
+\includegraphics[width=0.85\textwidth]{./graf/vscmakeinstall.png}
+\caption{Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio}
+\label{fig:vs-cmake-install}
+\end{figure}
+
+Po zweryfikowaniu instalacji wsparcia systemu CMake należy uruchomić środowisko Visual Studio, a następnie wybrać opcję Open local folder. Następnie należy wybrać główny folder projektu. Po otwarciu projektu i skończeniu generacji środowiska CMake należy zmienić opcję Select startup item na raymarcher.exe. Po wykonaniu powyższych kroków, projekt można budować oraz kompilować jak zwykły projekt środowiska Visual Studio.
+
+\subsection{Instalacja wykorzystując narzędzie CMake}
+
+\section{Sposób obsługi}
+Po uruchomieniu program przedstawia prosty interfejs użytkownika. Cały
+obszar okna wykorzystywany jest do wyświetlania renderowanego terenu.
+Dodatkowo wewnątrz okna renderowany jest obszar zawierający pola
+pozwalające na zmiane parametrów związanych z renderowaniem oraz generacją
+terenu. Użytkownik ma możliwość poruszania kamerą korzystając z klawiszy W, S, A oraz D. Zmiana orientacji kamery jest możliwa poprzez poruszanie myszką gdy wyśnięty jest lewy przycisk myszki. Szczegółowe informacje dotyczące korzystania z interfejsu użytkownika można uzyskać naciskając przycisk Show UI Help. Program można zakończyć poprzez nmaciśnięcie przycisku Escape lub zamknięcie okna.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{./graf/ui.png}
+\caption{Interfejs użytkownika}
+\label{fig:ui}
+\end{figure}
 
 
-Jeśli „Specyfikacja zewnętrzna”:
+\section{Przykład działania}
+do dodania po implementacji reszty programu.
+
+
 \begin{itemize}
 \item  wymagania sprzętowe i programowe
 \item  sposób instalacji
@@ -116,29 +150,28 @@ Jeśli „Specyfikacja zewnętrzna”:
 
 
  
-\begin{figure}
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    y tick label style={
-        /pgf/number format/.cd,
-            fixed,   % po zakomentowaniu os rzednych jest indeksowana wykladniczo
-            fixed zerofill, % 1.0 zamiast 1
-            precision=1,
-        /tikz/.cd
-    },
-    x tick label style={
-        /pgf/number format/.cd,
-            fixed,
-            fixed zerofill,
-            precision=2,
-        /tikz/.cd
-    }
-]
-\addplot [domain=0.0:0.1] {rnd};
-\end{axis} 
-\end{tikzpicture}
-\caption{Podpis rysunku po rysunkiem.}
-\label{fig:2}
-\end{figure}
-
+%% \begin{figure}
+%% \centering
+%% \begin{tikzpicture}
+%% \begin{axis}[
+%%     y tick label style={
+%%         /pgf/number format/.cd,
+%%             fixed,   % po zakomentowaniu os rzednych jest indeksowana wykladniczo
+%%             fixed zerofill, % 1.0 zamiast 1
+%%             precision=1,
+%%         /tikz/.cd
+%%     },
+%%     x tick label style={
+%%         /pgf/number format/.cd,
+%%             fixed,
+%%             fixed zerofill,
+%%             precision=2,
+%%         /tikz/.cd
+%%     }
+%% ]
+%% \addplot [domain=0.0:0.1] {rnd};
+%% \end{axis}
+%% \end{tikzpicture}
+%% \caption{Podpis rysunku po rysunkiem.}
+%% \label{fig:2}
+%% \end{figure}
