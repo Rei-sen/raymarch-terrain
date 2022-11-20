@@ -70,4 +70,8 @@ void Renderer::updateUniforms(const Config &c) {
   glUniform1i(p, c.generation.interpolationMethod);
   p = glGetUniformLocation(*program, "layers");
   glUniform1i(p, c.generation.layers);
+
+  // Rendering
+  p = glGetUniformLocation(*program, "enableInterpolation");
+  glUniform1i(p, c.rendering.enableInterpolation);
 }

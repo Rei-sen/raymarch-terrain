@@ -17,7 +17,7 @@ w~wersji 12.2.0 na~systemie Linux. Kompilacja progamu odbywa się przy pomocy na
 
 \section{Sposób instalacji}
 \subsection{System Linux}
-Przykład kompilacji programu został wykonany przy wykorzystaniu systememu Ubuntu 22.04. Pierwszym krokiem jest instalacja narzędzi takich jak program cmake, kompilator języka C i C++, itp. oraz instalacja wymaganych bibliotek.
+Przykład kompilacji programu został wykonany przy wykorzystaniu systemu Ubuntu 22.04. Pierwszym krokiem jest instalacja narzędzi takich jak program CMake, kompilator języka C i C++, itp. oraz instalacja wymaganych bibliotek.
 Do tego celu wykorzystane są następujące polecenia
 \lstset{basicstyle=\ttfamily, language=bash}
 \begin{lstlisting}[language=bash]
@@ -51,39 +51,64 @@ W celu kompilacji należy wykorzystać poniższe polecenie
 Końcowy plik wykonywalny o nazwie raymarch-terrain znajduje się w katalogu build.
 \subsection{System Windows}
 Pierwszym krokiem instalacji programu na systemie Windows jest pobranie
-repozytorium. Podobnie jak przy instalacji programu na systemie Linux, repozytorium należy pobrać rekurencyjnie, z wszystkimi submodułami.
-Dalszą część instalacji można dokonać w środowisku Visual studio lub
+projektu z repozytorium github, które można znaleźć pod adresem
+\url{https://github.com/Rei-sen/raymarch-terrain}. Podobnie jak przy instalacji programu na systemie Linux, repozytorium należy pobrać rekurencyjnie, z wszystkimi submodułami.
+Dalszą część instalacji można dokonać w~środowisku Visual Studio lub
 wykorzystując narzędzie CMake. Oba sposoby zostaną przedstawione poniżej.
-\subsubsection{Instalacja wykorzystując środowisko Visual Studio}
+\subsubsection{Instalacja przy wykorzystystaniu środowiska Visual Studio}
 Przed przystąpieniem do otwarcia projektu należy się upewnić, że
-wsparcie system budowy CMake jest zainstalowane w środowisku Visual Studio.
-Można tego dokonać w instalatorze Visual studio, jak w rysunku \ref{fig:vs-cmake-install}.
+wsparcie systemu budowy CMake jest zainstalowane w środowisku Visual Studio.
+Można tego dokonać w~instalatorze Visual Studio, jak na rysunku \ref{fig:vs-cmake-install}.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.85\textwidth]{./graf/vscmakeinstall.png}
-\caption{Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio}
+\includegraphics[width=1\textwidth]{./graf/vscmakeinstall.png}
+\caption{Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio.}
 \label{fig:vs-cmake-install}
 \end{figure}
 
-Po zweryfikowaniu instalacji wsparcia systemu CMake należy uruchomić środowisko Visual Studio, a następnie wybrać opcję Open local folder. Następnie należy wybrać główny folder projektu. Po otwarciu projektu i skończeniu generacji środowiska CMake należy zmienić opcję Select startup item na raymarcher.exe. Po wykonaniu powyższych kroków, projekt można budować oraz kompilować jak zwykły projekt środowiska Visual Studio.
+Po zweryfikowaniu instalacji wsparcia systemu CMake należy uruchomić środowisko Visual Studio, a następnie wybrać opcję \ang{Open local folder}. Kolejnym krokiem jest wybranie głównego folderu projektu. Po otwarciu projektu i~ukończeniu generacji środowiska CMake, należy zmienić opcję \ang{Select startup item} na raymarcher.exe. Po wykonaniu powyższych kroków, projekt można budować oraz kompilować jak zwykły projekt środowiska Visual Studio.
 
 \subsection{Instalacja wykorzystując narzędzie CMake}
-
-\section{Sposób obsługi}
-Po uruchomieniu program przedstawia prosty interfejs użytkownika. Cały
-obszar okna wykorzystywany jest do wyświetlania renderowanego terenu.
-Dodatkowo wewnątrz okna renderowany jest obszar zawierający pola
-pozwalające na zmiane parametrów związanych z renderowaniem oraz generacją
-terenu. Użytkownik ma możliwość poruszania kamerą korzystając z klawiszy W, S, A oraz D. Zmiana orientacji kamery jest możliwa poprzez poruszanie myszką gdy wyśnięty jest lewy przycisk myszki. Szczegółowe informacje dotyczące korzystania z interfejsu użytkownika można uzyskać naciskając przycisk Show UI Help. Program można zakończyć poprzez nmaciśnięcie przycisku Escape lub zamknięcie okna.
+Pierwszym etapem jest instlacja narzędzia CMake, które można znaleźć pod adresem \url{https://cmake.org}.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{./graf/ui.png}
+\includegraphics[width=0.75\textwidth]{./graf/cmake-win.png}
+\caption{Wybór folderu projektu oraz folderu budowy narzędziu graficznym CMake.}
+\label{fig:cmake-win}
+\end{figure}
+
+Następnie należy uruchomić narzędzie CMake w trybue graficznym.
+Kolejnym etapem jest wybór głównego katalogu projektu oraz katalogu budowy, w którym znajdą się końcowe pliki binarne.
+Jako główny katalog projektu należy wskazać katalog, w którym znajduje się plik CMakeLists.txt.
+Jako folder budowy został utworzony nowy folder o nazwie \ang{build} w głownym folderze projektu.
+Przykład powyższych kroków został przedstawiony na rysunku \ref{fig:cmake-win}.
+Kolejnym etapem jest konfiguracja systemu budowy, której można dokonać przyciskiem \ang{Configure}, a następnie wybierając (odpowiednie, interesujące nas) docelowe środowisko programistyczne. Rysunek \ref{fig:cmake-conf} przedstawia przykładową konfiguracje dla środowiska Visual Studio 16 dla systemów 64-bitowych.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{./graf/cmake-conf.png}
+\caption{Konfiguracja systemu budowy dla środowiska Visual Studio 16.}
+\label{fig:cmake-conf}
+\end{figure}
+
+Następnie należy wygenerować pliki budowy wykorzystując przycisk \ang{Generate}.
+Ostatnim etapem jest otwarcie projektu poprzez pliki znajdujące się w folderze budowy lub poprzez przycisk \ang{Open Project} w oknie programu CMake. W dalszej kolenjonści należy dokonać kompilacji programu korzystając z wcześniej wybranego środowiska programistycznego.
+
+\section{Sposób obsługi}
+Po uruchomieniu program przedstawia prosty interfejs użytkownika, widoczny na~rysunku \ref{fig:ui}. Cały
+obszar okna wykorzystywany jest do wyświetlania renderowanego terenu.
+Dodatkowo wewnątrz okna renderowany jest obszar zawierający pola
+pozwalające na zmianę parametrów związanych z renderowaniem oraz generacją
+terenu. Użytkownik ma możliwość poruszania kamerą korzystając z klawiszy W, S, A oraz D. Zmiana orientacji kamery jest możliwa poprzez poruszanie myszką gdy wciśnięty jest lewy przycisk myszki. Szczegółowe informacje dotyczące korzystania z interfejsu użytkownika można uzyskać naciskając przycisk \ang{Show UI Help}. Program można zakończyć poprzez naciśnięcie przycisku Escape lub zamknięcie okna.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.95\textwidth]{./graf/ui.png}
 \caption{Interfejs użytkownika}
 \label{fig:ui}
 \end{figure}
-
 
 \section{Przykład działania}
 do dodania po implementacji reszty programu.

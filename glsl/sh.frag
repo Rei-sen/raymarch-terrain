@@ -5,16 +5,19 @@ in vec2 fragPos;
 out vec4 fragColor;
 
 
-// camera
+// Camera
 uniform vec4 cameraPos;
 uniform mat4 cameraOrientationMatrix;
 uniform float fov;
 
-// generation
+// Generation
 uniform float coordinateScaling;
 uniform float amplitude;
 uniform int interpolationMethod;
 uniform int layers;
+
+// Rendering
+uniform bool enableInterpolation;
 
 const int MAX_STEPS = 100;
 const float MIN_DIST = 0.0;
@@ -110,17 +113,23 @@ vec3 gradient(vec3 p) {
                         sceneSDF(p + e.yyx) - d));
 }
 
-float map(vec3 eye, vec3 marchingDirection, float start, float end) {
+float map(vec3 eye, vec3 rayDir, float start, float end) {
   float depth = start;
+  float lh = 0.0, ly = 0.0;
+
+  float e = EPSILON;
+
   for (int i = 0; i < MAX_STEPS; i++) {
-    float dist = sceneSDF(eye + depth * marchingDirection);
-    if (dist < EPSILON) {
+    float dist = sceneSDF(eye + depth * rayDir);
+    if (dist < e ) {
       return depth;
     }
+
     depth += dist;
     if (depth >= end) {
       return end;
     }
+    e = EPSILON / sqrt(depth * 100);
   }
   return end;
 }

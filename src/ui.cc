@@ -96,8 +96,18 @@ void UI::showGenerationSettings(GenerationSettings &gen) {
     ImGui::SliderFloat("Amplitude", &gen.amplitude, 0.5, 1000.0, "%.3f",
                        ImGuiSliderFlags_AlwaysClamp |
                            ImGuiSliderFlags_Logarithmic);
-    ImGui::SliderInt("Layers", &gen.layers, 1, 10, "%d",
+    ImGui::SliderInt("Layers", &gen.layers, 1, 25, "%d",
                      ImGuiSliderFlags_AlwaysClamp);
+
+    ImGui::EndTabItem();
+  }
+}
+
+void UI::showRenderingSettings(RenderingSettings &rend) {
+  if (ImGui::BeginTabItem("Rendering")) {
+
+    ImGui::Checkbox("Linear interpolation of last step",
+                    &rend.enableInterpolation);
 
     ImGui::EndTabItem();
   }
