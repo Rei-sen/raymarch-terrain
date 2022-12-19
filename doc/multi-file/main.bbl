@@ -16,5 +16,253 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}\enddatalist
+\datalist[entry]{nty/global//global/global}
+  \entry{bib:spheretracing}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HJ}{%
+         family={Hart},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJ1}
+    \strng{fullhash}{HJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1007/s003710050084
+    \endverb
+    \field{title}{Sphere Tracing: A Geometric Method for the Antialiased Ray
+  Tracing of Implicit Surfaces}
+    \field{volume}{12}
+    \field{journaltitle}{The Visual Computer}
+    \field{month}{06}
+    \field{year}{1995}
+  \endentry
+
+  \entry{bib:glslpow}{online}{}
+    \name{author}{1}{}{%
+      {{hash=JKRRDB}{%
+         family={John\bibnamedelima Kessenich},
+         familyi={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+         suffix={Dave\bibnamedelima Baldwin},
+         suffixi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={Randi\bibnamedelima Rost},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JKDBRR1}
+    \strng{fullhash}{JKDBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{The OpenGL® Shading Language, Version 4.60.7}
+    \verb{url}
+    \verb https://registry.khronos.org/OpenGL/specs/gl/GLSLangSpec.4.60.pdf
+    \endverb
+    \field{year}{2019}
+    \field{urlday}{19}
+    \field{urlmonth}{12}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:Liktor2008RayTI}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=LG}{%
+         family={Liktor},
+         familyi={L\bibinitperiod},
+         given={Gabor},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LG1}
+    \strng{fullhash}{LG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Ray tracing implicit surfaces on the GPU}
+    \field{year}{2008}
+  \endentry
+
+  \entry{bib:gcraymarch}{online}{}
+    \name{author}{1}{}{%
+      {{hash=MM}{%
+         family={McGuire},
+         familyi={M\bibinitperiod},
+         given={Morgan},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MM1}
+    \strng{fullhash}{MM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Graphics Codex}
+    \verb{url}
+    \verb https://graphicscodex.courses.nvidia.com/app.html?page=_rn_rayMrch
+    \endverb
+    \field{year}{2021}
+    \field{urlday}{19}
+    \field{urlmonth}{12}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:Musgrave2003ProceduralFT}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=MFK}{%
+         family={Musgrave},
+         familyi={M\bibinitperiod},
+         given={F.\bibnamedelima Kenton},
+         giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MFK1}
+    \strng{fullhash}{MFK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Procedural fractal terrains}
+    \field{year}{2003}
+  \endentry
+
+  \entry{bib:bookofshaders}{book}{}
+    \name{author}{1}{}{%
+      {{hash=PGVJL}{%
+         family={Patricio Gonzalez\bibnamedelima Vivo},
+         familyi={P\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+         given={Jen\bibnamedelima Lowe},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PGVJL1}
+    \strng{fullhash}{PGVJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{The Book of Shaders}
+    \verb{url}
+    \verb https://thebookofshaders.com/
+    \endverb
+    \field{year}{2015}
+    \field{urlday}{19}
+    \field{urlmonth}{12}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:gpugems2}{book}{}
+    \name{author}{2}{}{%
+      {{hash=PM}{%
+         family={Pharr},
+         familyi={P\bibinitperiod},
+         given={Matt},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={Fernando},
+         familyi={F\bibinitperiod},
+         given={Randima},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Addison-Wesley Professional}%
+    }
+    \strng{namehash}{PMFR1}
+    \strng{fullhash}{PMFR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{chapter}{8}
+    \field{isbn}{0321335597}
+    \field{title}{GPU Gems 2: Programming Techniques for High-Performance
+  Graphics and General-Purpose Computation (Gpu Gems)}
+    \field{year}{2005}
+  \endentry
+
+  \entry{bib:iqfbm}{online}{}
+    \name{author}{1}{}{%
+      {{hash=QI}{%
+         family={Quilez},
+         familyi={Q\bibinitperiod},
+         given={Inigo},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QI1}
+    \strng{fullhash}{QI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{title}{fBM}
+    \verb{url}
+    \verb https://iquilezles.org/articles/fbm/
+    \endverb
+    \field{year}{2019}
+    \field{urlday}{09}
+    \field{urlmonth}{12}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:iqterrain}{online}{}
+    \name{author}{1}{}{%
+      {{hash=QI}{%
+         family={Quilez},
+         familyi={Q\bibinitperiod},
+         given={Inigo},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QI1}
+    \strng{fullhash}{QI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{title}{raymarching terrains}
+    \verb{url}
+    \verb https://iquilezles.org/articles/terrainmarching/
+    \endverb
+    \field{year}{2002}
+    \field{urlday}{19}
+    \field{urlmonth}{12}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:iqsoftshadow}{online}{}
+    \name{author}{1}{}{%
+      {{hash=QI}{%
+         family={Quilez},
+         familyi={Q\bibinitperiod},
+         given={Inigo},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QI1}
+    \strng{fullhash}{QI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{title}{Soft Shadows}
+    \verb{url}
+    \verb https://iquilezles.org/articles/rmshadows/
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{09}
+    \field{urlmonth}{12}
+    \field{urlyear}{2022}
+  \endentry
+\enddatalist
 \endinput

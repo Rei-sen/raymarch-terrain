@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.1)  19 NOV 2022 18:18
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.1)  19 DEC 2022 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1185,9 +1185,9 @@ Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write5
-runsystem(touch w18-test-202211191098.tex)...disabled (restricted).
+runsystem(touch w18-test-202212191131.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-202211191098.tex)...disabled (restricted).
+runsystem(rm -f w18-test-202212191131.tex)...disabled (restricted).
 
 runsystem(rm -f "main.gnuploterrors")...disabled (restricted).
 
@@ -1222,6 +1222,14 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count495
+\float@exts=\toks55
+\float@box=\box73
+\@float@everytoks=\toks56
+\@floatcapt=\box74
+)
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -1377,7 +1385,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count495
+\c@section@level=\count496
 )
 LaTeX Info: Redefining \ref on input line 103.
 LaTeX Info: Redefining \pageref on input line 103.
@@ -1395,6 +1403,7 @@ your preamble.
  on input line 103.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'polish'...
@@ -1428,7 +1437,7 @@ Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 103.
 Package biblatex Info: Reference segment=0 on input line 103.
-\c@lstlisting=\count496
+\c@lstlisting=\count497
 
 (./config/titlepage.tex
 *geometry* verbose mode - [ newgeometry ] result:
@@ -1506,13 +1515,13 @@ File: graf/politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 ] (./chapters/00.tex) [3] [4
 
 ] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1523,12 +1532,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [6] (./chapters/01.tex
 Rozdział 1.
-
-Underfull \hbox (badness 2134) in paragraph at lines 10--21
-\TU/lmr/m/n/12 technika generowania obrazów dla dwuwymiarowych oraz trójwymiaro
-wych scen.
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--21
 \TU/lmr/m/n/12 Działanie metody ray marching, podobnie do metody ray tracing, p
@@ -1611,12 +1614,6 @@ ydajniejszym
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-\TU/lmr/m/n/12 rozwiązaniem jest przedstawienie terenu jako (dwu argumentowej) 
-funkcji
- []
-
-
 Underfull \hbox (badness 1173) in paragraph at lines 9--12
 []\TU/lmr/m/n/12 Do kształtowania terenu w pierwszej kolejności zostanie wykorz
 ystana funkcja
@@ -1629,22 +1626,16 @@ stawie czterech
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 13--14
-[]\TU/lmr/m/n/12 Aby uzyskać porządany efekt zaimplementowana została interpola
-cja biliniowa
+Overfull \hbox (17.19016pt too wide) detected at line 22
+[][][]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ][]
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3
+File: ./graf/ilin-edges.png Graphic file (type bmp)
+<./graf/ilin-edges.png>
+[3
 
 ]
-
-LaTeX Warning: Reference `z programu' on page 4 undefined on input line 24.
-
-
-Underfull \hbox (badness 1163) in paragraph at lines 26--27
+Underfull \hbox (badness 1163) in paragraph at lines 34--35
 \TU/lmr/m/n/12 parametry $\OML/cmm/m/it/12 x$ \TU/lmr/m/n/12 i $\OML/cmm/m/it/1
 2 y$ \TU/lmr/m/n/12 wykorzystując funkcję [][]\TU/lmr/m/it/12 smoothstep[] $\OM
 L/cmm/m/it/12 n$[]\TU/lmr/m/n/12 -tego stopnia przedstawionej
@@ -1655,16 +1646,19 @@ File: ./graf/plot/bilinear.png Graphic file (type bmp)
 File: ./graf/plot/smooth.png Graphic file (type bmp)
 <./graf/plot/smooth.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\TU/lmr/m/n/10.95 (b) |interpolacja wykorzystujące funkcję
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]\TU/lmr/m/n/10.95 (b) |interpolacja wykorzystująca funkcję
  []
 
 
-Overfull \hbox (23.47202pt too wide) in paragraph at lines 55--61
+Overfull \hbox (23.47202pt too wide) in paragraph at lines 63--69
  [][][] 
  []
 
-) (./chapters/03.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1674,6 +1668,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
+Underfull \hbox (badness 1275) in paragraph at lines 73--74
+\TU/lmr/m/it/12 Browna[] []\TU/lmr/m/n/12 ([][]\TU/lmr/m/it/12 fractional Brown
+ian motion[][]\TU/lmr/m/n/12 , fBm)[[]6[]][[]5[]]. Pożądany efekt można osiągną
+ć
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1683,6 +1687,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+\TU/lmr/m/n/12 Dalsza analiza wygenerowanego terenu wykorzystując interpolację 
+biliniową,
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 124--125
+\TU/lmr/m/n/12 w jednej linii, co wpływa na naturalizm terenu. Aby uniknąć taki
+ej sytuacji
+ []
+
+File: ./graf/fbm-bilin.png Graphic file (type bmp)
+<./graf/fbm-bilin.png>
+) (./chapters/03.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1691,7 +1709,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6
+[6]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8
 
 ]
 Rozdział 3.
@@ -1703,7 +1739,7 @@ wymagania
 
 
 Underfull \hbox (badness 5970) in paragraph at lines 9--11
-[]\TU/lmr/m/n/12 Kontrola nad rozdzielczośćią obrazu - program pozwoli na konfi
+[]\TU/lmr/m/n/12 Kontrola nad rozdzielczością obrazu - program pozwoli na konfi
 gurację
  []
 
@@ -1719,20 +1755,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 ch
  []
 
-[7]
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+\TU/lmr/m/n/12 obliczonym średnim czasie renderowania pojedynczej klatki oraz i
+lości
+ []
+
+[9]
 Underfull \hbox (badness 1902) in paragraph at lines 30--31
 []\TU/lmr/m/n/12 Wysokiej wydajności, poprzez wykorzystanie potoku programowaln
 ego karty
  []
 
+File: ./graf/usecase.png Graphic file (type bmp)
+<./graf/usecase.png>
 
-Underfull \hbox (badness 3058) in paragraph at lines 42--43
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
+Underfull \hbox (badness 3058) in paragraph at lines 50--51
 []\TU/lmr/m/n/12 shadertoy.com - strona internetowa umożliwiająca tworzenie pro
 gramów w
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 \TU/lmr/m/n/12 jednostce cieniującej fragmentów. Narzędzie zostało wykorzystane
  do
  []
@@ -1746,18 +1798,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12
+
+]
 Rozdział 4.
 
 Underfull \hbox (badness 1082) in paragraph at lines 6--8
-[]\TU/lmr/m/n/12 Program wykorzystuje potok programowalny bilbioteki OpenGL ora
+[]\TU/lmr/m/n/12 Program wykorzystuje potok programowalny biblioteki OpenGL ora
 z jednostki
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 6--8
-\TU/lmr/m/n/12 program wykorzystuje następujące biblioteki, których kod źródłow
-y znajduje się
+Underfull \hbox (badness 4621) in paragraph at lines 6--8
+\TU/lmr/m/n/12 musi posiadać kartę graficzną wspierającą OpenGL co najmniej w w
+ersji 3.3.
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 15--17
+[]\TU/lmr/m/n/12 Projekt został skompilowany i przetestowany wykorzystując komp
+ilator g++
  []
 
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1774,9 +1843,7 @@ LaTeX Font Info:    No file TUfvm.fd. on input line 23.
 LaTeX Font Warning: Font shape `TU/fvm/m/n' undefined
 (Font)              using `TU/lmr/m/n' instead on input line 23.
 
-[9
-
-]
+[13]
 Underfull \hbox (badness 1412) in paragraph at lines 42--44
 \TU/fvm/m/n/12 projektu. Generacji plików reguł Makefile można dokonać wywołują
 c następujące
@@ -1792,12 +1859,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[14]
 File: ./graf/cmake-win.png Graphic file (type bmp)
 <./graf/cmake-win.png>
 
-Underfull \hbox (badness 1215) in paragraph at lines 82--88
-[]\TU/fvm/m/n/12 Następnie należy uruchomić narzędzie CMake w trybue graficznym
+Underfull \hbox (badness 1577) in paragraph at lines 82--88
+[]\TU/fvm/m/n/12 Następnie należy uruchomić narzędzie CMake w trybie graficznym
 . Kolejnym
  []
 
@@ -1807,6 +1874,8 @@ Underfull \hbox (badness 2318) in paragraph at lines 82--88
 ]4.3[] przedstawia
  []
 
+File: ./graf/cmake-conf.png Graphic file (type bmp)
+<./graf/cmake-conf.png>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1815,10 +1884,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
-File: ./graf/cmake-conf.png Graphic file (type bmp)
-<./graf/cmake-conf.png>
-
+[15]
 Underfull \hbox (badness 1448) in paragraph at lines 96--98
 []\TU/fvm/m/n/12 Następnie należy wygenerować pliki budowy wykorzystując przyci
 sk [][]\TU/lmr/m/it/12 Generate[][]\TU/fvm/m/n/12 .
@@ -1848,17 +1914,18 @@ Underfull \hbox (badness 1442) in paragraph at lines 100--105
 2 Show UI Help[][]\TU/fvm/m/n/12 . Program można
  []
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
 File: ./graf/ui.png Graphic file (type bmp)
 <./graf/ui.png>
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]) (./chapters/05.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1867,7 +1934,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[17]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1876,11 +1943,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14
-
-]
-Rozdział 5.
-) (./chapters/06.tex [15]
+[18]) (./chapters/05.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1889,24 +1952,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16
-
-]
-Rozdział 6.
-) (./chapters/07.tex [17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-Rozdział 7.
-) [19
-
-]
+[19]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1918,12 +1964,209 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20
 
 ]
+Rozdział 5.
 
-LaTeX Warning: Empty bibliography on input line 162.
+Underfull \hbox (badness 1629) in paragraph at lines 5--7
+[]\TU/fvm/m/n/12 Do realizacji projektu wykorzystano język C++ oraz bibliotekę 
+OpenGL. Do
+ []
 
-[21
 
-] [22] (./chapters/08.tex) (./chapters/09.tex [23
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+\TU/fvm/m/n/12 graficznej. W pierwszej kolejności następuje utworzenie okna pro
+gramu z
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 5--7
+\TU/fvm/m/n/12 wykorzystaniu biblioteki GLAD i rozpoczęcie głównej pętli progra
+mu, w której
+ []
+
+
+Underfull \hbox (badness 5302) in paragraph at lines 15--16
+[]\TU/fvm/m/n/12 Informacje o konfiguracji przekazywane są do jednostek cieniuj
+ących przy
+ []
+
+[21]
+Underfull \hbox (badness 1931) in paragraph at lines 50--51
+\TU/fvm/m/n/12 oraz ich połączenie. Ponadto umożliwia przekazywanie konfiguracj
+i do jednostek
+ []
+
+
+Underfull \vbox (badness 2359) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
+Underfull \hbox (badness 3396) in paragraph at lines 105--109
+[]\TU/fvm/m/n/12 Algorytm [][]\TU/lmr/m/it/12 raymarching[] []\TU/fvm/m/n/12 je
+st najważniejszym z algorytmów wykorzystanych w
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 105--109
+\TU/fvm/m/n/12 końcowy wynik to odległość, którą musi przebyć wiązka by preciąć
+ najbliższą
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+File: ./graf/shadow.png Graphic file (type bmp)
+<./graf/shadow.png>
+File: ./graf/shadowsmooth.png Graphic file (type bmp)
+<./graf/shadowsmooth.png>
+
+Overfull \hbox (15.64801pt too wide) in paragraph at lines 178--183
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]) (./chapters/06.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+Rozdział 6.
+
+Underfull \hbox (badness 6094) in paragraph at lines 4--5
+[]\TU/fvm/m/n/12 Z uwagi na implementację programu na karcie graficznej jako je
+dnostkę
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 4--5
+\TU/fvm/m/n/12 co spowodowało, że testowanie sprowadzało się do metody prób i b
+łędów.
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 4--5
+\TU/fvm/m/n/12 Ewentualne niepoprawne obliczenia są często niewidoczne mimo wyd
+awało by się
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 4--5
+\TU/fvm/m/n/12 poprawnego działania. Jednym z takich problemów było obliczanie 
+wektorów
+ []
+
+File: ./graf/norm.png Graphic file (type bmp)
+<./graf/norm.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27
+
+])
+(./chapters/07.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+Rozdział 7.
+
+Underfull \hbox (badness 1735) in paragraph at lines 2--4
+\TU/fvm/m/n/12 tworzenie skomplikowanych scen, poprzez zastosowanie kombinacji 
+wielu prostych
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 7--8
+[]\TU/fvm/m/n/12 Nałożenie na siebie wielu takich siatek, o zróżnicowanej częst
+otliwości oraz
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 10--11
+\TU/fvm/m/n/12 programu. W związku z powyższym zdecydowano się na rozwiązanie w
+ postaci
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+\TU/fvm/m/n/12 przykład poprzez generację struktur takich jak jęziora, rzeki, k
+onstrukcje
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 12--14
+\TU/fvm/m/n/12 architektoniczne, itp. Program można rozbudować poprzez zastosow
+anie bardziej
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 15--16
+\TU/fvm/m/n/12 znacząco utrudniło debugowanie programu. Przykładem takiej sytua
+cji był, przez
+ []
+
+[29
+
+])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+\TU/lmr/m/it/12 Version 4.60.7\TU/fvm/m/n/12 . 2019. \TU/lmr/m/sc/12 url\TU/fvm
+/m/n/12 :
+ []
+
+[31
+
 
 ]
 
@@ -1934,20 +2177,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24
+[32
 
-]) (./chapters/10.tex [25]
+] [33] [34] (./chapters/08.tex) (./chapters/09.tex [35
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26
-
-]) [27]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1956,13 +2190,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28
+[36
+
+]) (./chapters/10.tex [37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38
+
+]) [39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40
 
 ] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [29]
+ [41]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1971,32 +2227,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30
+[42
 
 ] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [31] (./main.aux)
+ [43] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2BCBE7F1FB450B4A9C7DD5ECAEA20CA3;3770.
+(rerunfilecheck)             Checksum: 3E3E474FFF77532EDA0474CDCE06639D;4605.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49655 strings out of 476156
- 1108176 string characters out of 5814963
- 1957119 words of memory out of 5000000
- 69608 multiletter control sequences out of 15000+600000
- 477519 words of font info for 80 fonts, out of 8000000 for 9000
+ 50204 strings out of 476156
+ 1118520 string characters out of 5814963
+ 1998650 words of memory out of 5000000
+ 70145 multiletter control sequences out of 15000+600000
+ 477527 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,92p,1914b,5587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,15n,92p,1914b,5687s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (37 pages).
+Output written on main.pdf (49 pages).

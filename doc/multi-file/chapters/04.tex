@@ -3,8 +3,8 @@
 
 \section{Wymagania sprzętowe i programowe}
 
-Program wykorzystuje potok programowalny bilbioteki OpenGL oraz jednostki cieniujące napisane w~języku GLSL w wersji 3.30, oznacza to, że~system użytkownika musi posiadać kartę graficzną wspierającą OpenGL conajmniej w~wersji 3.3.
-Dodatkowo program wykorzystuje następujące biblioteki, których kod źródłowy znajduje się wewnątrz projetu:
+Program wykorzystuje potok programowalny biblioteki OpenGL oraz jednostki cieniujące napisane w~języku GLSL w wersji 3.30, oznacza to, że~system użytkownika musi posiadać kartę graficzną wspierającą OpenGL co najmniej w~wersji 3.3.
+Dodatkowo program wykorzystuje następujące biblioteki, których kod źródłowy znajduje się wewnątrz projektu:
 \begin{itemize}
 \item GLAD
 \item GLFW
@@ -13,7 +13,7 @@ Dodatkowo program wykorzystuje następujące biblioteki, których kod źródłow
 \end{itemize}
 
 Projekt został skompilowany i~przetestowany wykorzystując kompilator g++
-w~wersji 12.2.0 na~systemie Linux. Kompilacja progamu odbywa się przy pomocy narzędzia CMake.
+w~wersji 12.2.0 na~systemie Linux. Kompilacja programu odbywa się przy pomocy narzędzia CMake.
 
 \section{Sposób instalacji}
 \subsection{System Linux}
@@ -55,7 +55,7 @@ projektu z repozytorium github, które można znaleźć pod adresem
 \url{https://github.com/Rei-sen/raymarch-terrain}. Podobnie jak przy instalacji programu na systemie Linux, repozytorium należy pobrać rekurencyjnie, z wszystkimi submodułami.
 Dalszą część instalacji można dokonać w~środowisku Visual Studio lub
 wykorzystując narzędzie CMake. Oba sposoby zostaną przedstawione poniżej.
-\subsubsection{Instalacja przy wykorzystystaniu środowiska Visual Studio}
+\subsubsection{Instalacja przy wykorzystaniu środowiska Visual Studio}
 Przed przystąpieniem do otwarcia projektu należy się upewnić, że
 wsparcie systemu budowy CMake jest zainstalowane w środowisku Visual Studio.
 Można tego dokonać w~instalatorze Visual Studio, jak na rysunku \ref{fig:vs-cmake-install}.
@@ -70,7 +70,7 @@ Można tego dokonać w~instalatorze Visual Studio, jak na rysunku \ref{fig:vs-cm
 Po zweryfikowaniu instalacji wsparcia systemu CMake należy uruchomić środowisko Visual Studio, a następnie wybrać opcję \ang{Open local folder}. Kolejnym krokiem jest wybranie głównego folderu projektu. Po otwarciu projektu i~ukończeniu generacji środowiska CMake, należy zmienić opcję \ang{Select startup item} na raymarcher.exe. Po wykonaniu powyższych kroków, projekt można budować oraz kompilować jak zwykły projekt środowiska Visual Studio.
 
 \subsection{Instalacja wykorzystując narzędzie CMake}
-Pierwszym etapem jest instlacja narzędzia CMake, które można znaleźć pod adresem \url{https://cmake.org}.
+Pierwszym etapem jest instalacja narzędzia CMake, które można znaleźć pod adresem \url{https://cmake.org}.
 
 \begin{figure}
 \centering
@@ -79,22 +79,22 @@ Pierwszym etapem jest instlacja narzędzia CMake, które można znaleźć pod ad
 \label{fig:cmake-win}
 \end{figure}
 
-Następnie należy uruchomić narzędzie CMake w trybue graficznym.
+Następnie należy uruchomić narzędzie CMake w trybie graficznym.
 Kolejnym etapem jest wybór głównego katalogu projektu oraz katalogu budowy, w którym znajdą się końcowe pliki binarne.
 Jako główny katalog projektu należy wskazać katalog, w którym znajduje się plik CMakeLists.txt.
 Jako folder budowy został utworzony nowy folder o nazwie \ang{build} w głownym folderze projektu.
 Przykład powyższych kroków został przedstawiony na rysunku \ref{fig:cmake-win}.
 Kolejnym etapem jest konfiguracja systemu budowy, której można dokonać przyciskiem \ang{Configure}, a następnie wybierając (odpowiednie, interesujące nas) docelowe środowisko programistyczne. Rysunek \ref{fig:cmake-conf} przedstawia przykładową konfiguracje dla środowiska Visual Studio 16 dla systemów 64-bitowych.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.65\textwidth]{./graf/cmake-conf.png}
-\caption{Konfiguracja systemu budowy dla środowiska Visual Studio 16.}
+\caption{Interpolacja biliniowa w programie.}
 \label{fig:cmake-conf}
 \end{figure}
 
 Następnie należy wygenerować pliki budowy wykorzystując przycisk \ang{Generate}.
-Ostatnim etapem jest otwarcie projektu poprzez pliki znajdujące się w folderze budowy lub poprzez przycisk \ang{Open Project} w oknie programu CMake. W dalszej kolenjonści należy dokonać kompilacji programu korzystając z wcześniej wybranego środowiska programistycznego.
+Ostatnim etapem jest otwarcie projektu poprzez pliki znajdujące się w folderze budowy lub poprzez przycisk \ang{Open Project} w oknie programu CMake. W dalszej kolejności należy dokonać kompilacji programu korzystając z wcześniej wybranego środowiska programistycznego.
 
 \section{Sposób obsługi}
 Po uruchomieniu program przedstawia prosty interfejs użytkownika, widoczny na~rysunku \ref{fig:ui}. Cały
@@ -111,20 +111,99 @@ terenu. Użytkownik ma możliwość poruszania kamerą korzystając z klawiszy 
 \end{figure}
 
 \section{Przykład działania}
-do dodania po implementacji reszty programu.
-
+Program daje użytkownikowi szeroki zakers ustawień związanych z renderowaniem oraz generowaniem terenu. Jedną z takich możliwości jest kontrola ustawień kamery w zakładce \ang{Camera}, lista dostępnych ustawień:
 
 \begin{itemize}
-\item  wymagania sprzętowe i programowe
-\item  sposób instalacji
-\item  sposób aktywacji
-\item  kategorie użytkowników
-\item  sposób obsługi
-\item  administracja systemem
-\item  kwestie bezpieczeństwa
-\item  przykład działania
-\item  scenariusze korzystania z systemu (ilustrowane zrzutami z ekranu lub generowanymi dokumentami)
+\item Position - współrzędne, w których znajduje się kamera
+\item FOV - pole widzenia kamery podane w stopniach
+\item Orientation - orientacja kamery
+  \begin{itemize}
+    \item Horizontal - obrócenie kamery względem osi Y,podane w radianach
+    \item Vertical - obrócenie kamery względem osi X, podane w radianach
+  \end{itemize}
 \end{itemize}
+
+Wygenerowanie pożądanego ukształtowania terenu umożliwione jest przez następujące opcje:
+
+\begin{itemize}
+\item Terrain - Ustawienia związane z ukształtowaniem terenu
+  \begin{itemize}
+    \item Max terrain rendering steps - maksymalna ilość kroków renderowania terenu
+    \item Interpolation method - Metoda interpolacji wysokości terenu
+      \begin{itemize}
+        \item Linear - interpolacja biliniowa
+        \item Smooth - interpolacja z wykorzystaniem funkcji \ang{smoothstep}
+      \end{itemize}
+    \item Coordinate scaling - skalowanie współrzędnych X oraz Z.
+    \item Amplitude - skalowanie wysokości terenu
+    \item Layers - ilość warstw wykorzystane w technice \ang{fBm}.
+    \item Layer rotation - Obrócenie współrzędnych punktu dla każdej warstwy w technice \ang{fBm}, podane w radianach
+    \item Hurst exponent - wykładnik Hurst'a, wykorzystany w technice \ang{fBm}
+    \item Ground color - kolor terenu
+  \end{itemize}
+\item Sky color - kolor nieba
+\item Sun direction - kierunek światła, podany w radianach
+\item Grass - Ustawienia związane z trawą
+  \begin{itemize}
+    \item Grass transition start - wartość współrzędnej Y wektoru normalnego, od której rozpoczyna się trawa
+    \item Grass transition end - wartość współrzędnej Y wektoru normalnego, od której trawa ma pełny kolor
+    \item Grass color - kolor trawy
+  \end{itemize}
+\item Trees - ustawienia związane z generacją drzew
+  \begin{itemize}
+    \item Max tree rendering steps - maksymalna ilość kroków renderowania drzew
+    \item Tree spacing - rozmiar odstępu między drzewami
+    \item Tree radius - szerokość drzew
+    \item Tree height - wysokość drzew
+    \item Tree height offset - przesunięcie drzew w pionie
+    \item Tree layers - ilość warstw odkształceń drzew
+    \item Tree distortion coordinate - skalowanie współrzędnych odkształceń drzew
+    \item Tree distortion amplitude - rozmiar odkształceń drzew
+    \item Tree color - zakres kolorów drzew
+    \item Tree surface flatness - kontrola jak płaski musi być teren by wyświetlić drzewa
+  \end{itemize}
+\item Clouds - ustawienia związane z generacją chmur
+  \begin{itemize}
+    \item Max cloud rendering steps - maksymalna ilość kroków renderowania chmur
+    \item Cloud altitude - wysokość na jakiej renderowane są chmury
+    \item Cloud height - wysokość chmur
+    \item Cloud coordinate scaling - skalowanie współrzędnych X oraz Z
+    \item Cloud amplitude - rozmiar odkształceń chmur
+    \item Cloud density scaling - gęstość  chmur
+    \item Cloud layers - ilość warst wykorzystanych w technice \ang{fBm}
+  \end{itemize}
+\end{itemize}
+
+Konfiguracja związana z renderowaniem odbywa się poprzez następujące ustawienia:
+\begin{itemize}
+\item Enable shadows -
+\item Soft shadows -
+\item Soft shadow range - rozmia
+\item Numerical normals - Obliczenie wektorów normalnych przy wykorzystaniu metod numerycznych
+\item Enable sun glare -
+\item Sun glare color -
+\end{itemize}
+
+ustawienia obrazu
+...
+
+Pozostałe opcje, inne niż związane z renderowaniem oraz generacją terenu, znajdują się w zakładce \ang{Settings}
+
+\begin{itemize}
+\item Camera speed - szybkość poruszania kamerą
+\item Mouse sensitivity - czułość myszki
+\end{itemize}
+%% \begin{itemize}
+%% \item  wymagania sprzętowe i programowe
+%% \item  sposób instalacji
+%% \item  sposób aktywacji
+%% \item  kategorie użytkowników
+%% \item  sposób obsługi
+%% \item  administracja systemem
+%% \item  kwestie bezpieczeństwa
+%% \item  przykład działania
+%% \item  scenariusze korzystania z systemu (ilustrowane zrzutami z ekranu lub generowanymi dokumentami)
+%% \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%
 %% RYSUNEK Z PLIKU

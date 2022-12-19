@@ -4,24 +4,32 @@ W niniejszym opracowaniu zostaną przedstawione zagadnienia związane z~renderow
 
 Rozwiązania tego typu mogą być wykorzystywane w~obszarach związanych z~tworzeniem filmów, gier komputerowych, animacji itp. Ta metoda renderowania na dzień dzisiejszy nie jest jeszcze zbyt powszechna, a przynajmniej nie w takim stopniu jak metody oparte o rasteryzację trójkątów czy ray tracing.
 
-Biorąc pod uwagę sposób działania technik renderowania opartych o wiązki światła, przedstawienie generowanego terenu wykorzystując siatkę trójkątów nie jest wydajnym rozwiązaniem. Wiąże się to z ilością obliczeń koniecznych do wykrycia kolizji z każdym trójkątem siatki dla każdej wiązki światła. Znacznie lepszym  i wydajniejszym rozwiązaniem jest przedstawienie terenu jako (dwu argumentowej) funkcji matematycznej.
+Biorąc pod uwagę sposób działania technik renderowania opartych o wiązki światła, przedstawienie generowanego terenu wykorzystując siatkę trójkątów nie jest wydajnym rozwiązaniem. Wiąże się to z ilością obliczeń koniecznych do wykrycia kolizji z każdym trójkątem siatki dla każdej wiązki światła. Znacznie lepszym  i wydajniejszym rozwiązaniem jest przedstawienie terenu jako funkcji matematycznej.
 
-Do kształtowania terenu w pierwszej kolejności zostanie wykorzystana funkcja zwracająca pseudolosową wartość dla danego dwuwymiarowego punktu.
+Do kształtowania terenu w pierwszej kolejności zostanie wykorzystana funkcja zwracająca pseudolosową wartość dla danego dwuwymiarowego punktu\cite{bib:iqterrain}.
 W tym celu można użyć z wielu różnych metod, przykładowo wykorzystując dwuwymiarową teksturę
 lub funkcję matematyczną której wyniki przypominają losowe wartości. Aby uzyskać ciągłą funkcję, wartość każdego punktu jest interpolowana na podstawie czterech najbliższych punktów, których współrzędne są wartościami całkowitymi.
 
-Aby uzyskać porządany efekt zaimplementowana została interpolacja biliniowa opisana wzorem \ref{eq:interp-biliniowa}, dla wybranych punktów $a, b, c$ i $d$. Jako parametry tej funkcji $x$ i $y$ należą do przedziału $x, y \in [0, 1]$. Przykład tego typu (może jakoś inaczej) interpolacji przedstawia rysunek \ref{fig:lerp}.
-\begin{equation}
+Aby uzyskać pożądany efekt zaimplementowana została interpolacja biliniowa opisana wzorem \ref{eq:interp-biliniowa}, dla wybranych punktów $a, b, c$ i $d$. Jako parametry tej funkcji $x$ i $y$ należą do przedziału $x, y \in [0, 1]$. Przykład tego rodzaju interpolacji przedstawia rysunek \ref{fig:lerp}.
+\begin{equation}[H]
 \label{eq:interp-biliniowa}
   \begin{split}
     f(x, y) & = a \\
-       & + (b - a) * x \\
-       & + (c - a) * y \\
-       & + (a - b - c + d) * x * y
+       & + (b - a) x \\
+       & + (c - a) y \\
+       & + (a - b - c + d) x y
     \end{split}
 \end{equation}
 
-Można zauważyć, że efektem tej interpolacji są bardzo widoczne granice między grupami punktów, co przedstawia rysunek \ref{z programu}.
+Można zauważyć, że efektem tej interpolacji są bardzo widoczne granice między grupami punktów, co przedstawia rysunek \ref{fig:linterp-edges}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{./graf/ilin-edges.png}
+\caption{Konfiguracja systemu budowy dla środowiska Visual Studio 16.}
+\label{fig:linterp-edges}
+\end{figure}
+
 
 Rozwiązaniem tego problemu jest zastosowanie funkcji \ang{smoothstep} pozwalającej na uzyskanie wygładzonej interpolacji. W tym celu zmodyfikowano wzór \ref{eq:interp-biliniowa}, zastępując parametry $x$ i $y$ wykorzystując funkcję \ang{smoothstep} $n$-tego stopnia przedstawionej jako $S_n(p)$. Ostateczną postać funkcji przedstawia wzór \ref{eq:smooth-interp}. Obliczając gradient tej funkcji, można zauważyć, że wartości pochodnej dla każdego z czterech granicznych punktów jest równa $0$, dzięki czemu przejścia między grupami punktów nie są widoczne.
 
@@ -29,9 +37,9 @@ Rozwiązaniem tego problemu jest zastosowanie funkcji \ang{smoothstep} pozwalaj�
 \label{eq:smooth-interp}
   \begin{split}
     f(x, y) & = a \\
-       & + (b - a) * S_n(x) \\
-       & + (c - a) * S_n(y) \\
-       & + (a - b - c + d) * S_n(x) * S_n(y)
+       & + (b - a) S_n(x) \\
+       & + (c - a) S_n(y) \\
+       & + (a - b - c + d) S_n(x) S_n(y)
     \end{split}
 \end{equation}
 
@@ -47,13 +55,13 @@ W programie wykorzystana została funkcja \ang{smoothstep} pierwszego stopnia, k
 Wynik zastosowania tego wzoru ukazuje rysunek \ref{fig:smooth-interp}.
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \subfloat[interpolacja biliniowa]{
   \includegraphics[width=0.5\textwidth]{./graf/plot/bilinear.png}
   \label{fig:lerp}
 }
-\subfloat[interpolacja wykorzystujące funkcję \ang{smoothstep} pierwszego stopnia]{
+\subfloat[interpolacja wykorzystująca funkcję \ang{smoothstep} pierwszego stopnia]{
   \includegraphics[width=0.5\textwidth]{./graf/plot/smooth.png}
   \label{fig:smooth-interp}
 }
@@ -62,6 +70,65 @@ Wynik zastosowania tego wzoru ukazuje rysunek \ref{fig:smooth-interp}.
 \label{fig:interpolacja}
 \end{figure}
 
+Uzyskany wynik jest zadowalający, jednak nadal nie przypomina naturalnego terenu. W celu poprawy jakości terenu można zastosować technikę o nazwie \ang{ułamkowe ruchy Browna} (\ang{fractional Brownian motion}, fBm)\cite{bib:bookofshaders}\cite{bib:Musgrave2003ProceduralFT}. Pożądany efekt można osiągnąć wykorzystując wzór \ref{eq:fbm}\cite{bib:iqfbm}, w którym $H$ jest wykładnikiem Hursta, a $N$ jest pożądaną ilością oktaw tej operacji.
+\begin{equation}
+\label{eq:fbm}
+  \begin{split}
+    fbm(p) = \sum^N_{k = 0} 2^{-Hk}f(2^kp)
+  \end{split}
+\end{equation}
+
+W programie zastosowano wartość $H = 1$, gdyż wartość ta dała najbardziej realistyczne wyniki.
+Zastosowanie stałej wartości $H$ daje bardziej uproszczony wzór, przedstawiony w postaci pseudokodu na rysunku \ref{fig:pseudokod:fbm}:
+
+\begin{figure}[H]
+\centering
+\begin{lstlisting}[language=C]
+float fbm(vec2 p) {
+  float sum = 0.0;
+
+  for (int i = 0; i < LAYERS; i++) {
+    sum += pow(2, -i) * noise(pow(2, i) * p);
+  }
+
+  return sum;
+}
+\end{lstlisting}
+\caption{Pseudokod funkcji \ang{fBm}.}
+\label{fig:pseudokod:fbm}
+\end{figure}
+
+Kod z rysunku \ref{fig:pseudokod:fbm} został zmodyfikowany tak by zoptymalizować czas wykonania i uniknąć wykorzystania funkcji \ang{pow}\cite{bib:glslpow}. Wynikiem jest pseudokod z rysunku \ref{fig:pseudokod:fbm-opt}.
+
+\begin{figure}[H]
+\centering
+%% \lstset{basicstyle=\ttfamily}
+\begin{lstlisting}[language=C]
+float fbm(vec2 p) {
+  float sum = 0.0;
+  float a = 1.0;
+
+  for (int i = 0; i < LAYERS; i++) {
+    sum += a * noise(p);
+    p *= 2.0;
+    a *= 0.5;
+  }
+
+  return sum;
+}
+\end{lstlisting}
+\caption{Pseudokod funkcji \ang{fBm} po optymalizacji.}
+\label{fig:pseudokod:fbm-opt}
+\end{figure}
+
+Po zastosowaniu powyższych działań uzyskano znacznie bardziej naturalny wynik. Dalsza analiza wygenerowanego terenu wykorzystując interpolację biliniową, przedstawiona na rysunku \ref{fig:fbm-bilin-align}, nasuwa wnioski, że wszystkie odkształcenia terenu biegną w jednej linii, co wpływa na naturalizm terenu. Aby uniknąć takiej sytuacji zmodyfikowano algorytm \ang{fBm} by oprócz skalowania współrzędnych punktu, zostały one także obrócone względem środka układu współrzędnych.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{./graf/fbm-bilin.png}
+\caption{Wynik zastosowania \ang{fBm} dla 10 oktaw, z wykorzystaniem interpolacji biliniowej.}
+\label{fig:fbm-bilin-align}
+\end{figure}
 
 %% \begin{itemize}
 %% \item sformułowanie problemu

@@ -9,6 +9,7 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Konfiguracja systemu budowy dla środowiska Visual Studio 16.\relax }}{4}{figure.caption.8}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
@@ -17,16 +18,110 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Porównanie wyników obu metod interpolacji między czterema punktami\relax }}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Porównanie wyników obu metod interpolacji między czterema punktami\relax }}{5}{figure.caption.9}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Pseudokod funkcji {\selectlanguage {british}\emph {fBm}}.\relax }}{6}{figure.caption.10}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Pseudokod funkcji {\selectlanguage {british}\emph {fBm}} po optymalizacji.\relax }}{6}{figure.caption.11}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Wynik zastosowania {\selectlanguage {british}\emph {fBm}} dla 10 oktaw, z wykorzystaniem interpolacji biliniowej.\relax }}{7}{figure.caption.12}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram przypadków użycia.\relax }}{10}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio.\relax }}{15}{figure.caption.15}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wybór folderu projektu oraz folderu budowy narzędziu graficznym CMake.\relax }}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Interpolacja biliniowa w programie.\relax }}{16}{figure.caption.17}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Interfejs użytkownika\relax }}{17}{figure.caption.18}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Application}}.\relax }}{22}{figure.caption.19}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Renderer}}.\relax }}{23}{figure.caption.20}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Renderer}}.\relax }}{23}{figure.caption.21}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Pseudokod algorytmu renderowania metodą {\selectlanguage {british}\emph {raymarching}}.\relax }}{24}{figure.caption.22}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Pseudokod modyfikacji algorytmu {\selectlanguage {british}\emph {raymarching}} wykorzystany do obliczenia cieni.\relax }}{25}{figure.caption.23}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Porównanie wyników metod renderowania cieni\relax }}{26}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Niepoprawne obliczanie wektorów normalnych.\relax }}{28}{figure.caption.25}%
+\addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio.\relax }}{11}{figure.caption.10}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Wybór folderu projektu oraz folderu budowy narzędziu graficznym CMake.\relax }}{11}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Konfiguracja systemu budowy dla środowiska Visual Studio 16.\relax }}{12}{figure.caption.12}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
@@ -37,15 +132,7 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Interfejs użytkownika\relax }}{13}{figure.caption.13}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pseudokod w \texttt {listings}.\relax }}{15}{figure.caption.14}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\addvspace {10\p@ }
-\addvspace {10\p@ }

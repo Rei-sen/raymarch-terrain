@@ -46,6 +46,7 @@ void Application::run() {
 
     // ImGui::ShowDemoWindow();
     ui.display(config);
+    //config.generation.layerRotation += 0.00001;
 
     renderer.draw(config);
 

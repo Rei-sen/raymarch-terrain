@@ -17,22 +17,6 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Wymagania niefunkcjonalne}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Przypadki użycia}{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Wykorzystane narzędzia}{8}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Specyfikacja zewnętrzna}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Wymagania sprzętowe i programowe}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Sposób instalacji}{9}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}System Linux}{9}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}System Windows}{10}{subsection.4.2.2}%
-\contentsline {subsubsection}{Instalacja przy wykorzystystaniu środowiska Visual Studio}{10}{section*.9}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Instalacja wykorzystując narzędzie CMake}{11}{subsection.4.2.3}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
@@ -41,20 +25,115 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {4.3}Sposób obsługi}{12}{section.4.3}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {4.4}Przykład działania}{13}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Specyfikacja wewnętrzna}{15}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{17}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{19}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{21}{chapter.7}%
-\contentsline {chapter}{Spis skrótów i symboli}{23}{appendix*.16}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{25}{appendix*.17}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{27}{appendix*.18}%
-\contentsline {chapter}{Spis rysunków}{29}{appendix*.19}%
-\contentsline {chapter}{Spis tabel}{31}{appendix*.20}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Wymagania niefunkcjonalne}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Przypadki użycia}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Wykorzystane narzędzia}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Specyfikacja zewnętrzna}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Wymagania sprzętowe i programowe}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Sposób instalacji}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}System Linux}{13}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}System Windows}{14}{subsection.4.2.2}%
+\contentsline {subsubsection}{Instalacja przy wykorzystaniu środowiska Visual Studio}{14}{section*.14}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Instalacja wykorzystując narzędzie CMake}{15}{subsection.4.2.3}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {4.3}Sposób obsługi}{16}{section.4.3}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {4.4}Przykład działania}{17}{section.4.4}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {5}Specyfikacja wewnętrzna}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Architektura systemu oraz przedstawienie idei}{21}{section.5.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {5.2}Przegląd ważniejszych klas oraz struktur danych}{22}{section.5.2}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {5.3}Przegląd ważniejszych algorytmów}{24}{section.5.3}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{29}{chapter.7}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Bibliografia}{31}{chapter*.26}%
+\contentsline {chapter}{Spis skrótów i symboli}{35}{appendix*.27}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Źródła}{37}{appendix*.28}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{39}{appendix*.29}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Spis rysunków}{41}{appendix*.30}%
+\contentsline {chapter}{Spis tabel}{43}{appendix*.31}%

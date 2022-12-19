@@ -1,7 +1,25 @@
 \chapter{Podsumowanie i wnioski}
+W niniejszej pracy przedstawiono działanie metody \ang{raymarching}, wykorzystanej do renderowania scen przedstawiających trójwymiarowy teren.
+Technika ta pozwala na tworzenie skomplikowanych scen, poprzez zastosowanie kombinacji wielu prostych funkcji matematycznych. Kształtowanie ternu odbywa się poprzez:
 \begin{itemize}
-\item uzyskane wyniki w świetle postawionych celów i zdefiniowanych wyżej wymagań
-\item kierunki ewentualnych danych prac (rozbudowa funkcjonalna …)
-\item problemy napotkane w trakcie pracy
+\item Utworzenie siatki punktów z przypisanymi losowymi wartościami, odpowiadającymi wysokości terenu w danym miejscu,
+\item Interpolację wartości między punktami,
+\item Nałożenie na siebie wielu takich siatek, o zróżnicowanej częstotliwości oraz amplitudzie ich punktów.
 \end{itemize}
 
+Przy tworzeniu programu zdecydowano się na zastosowanie technik dających gorsze efekty, jednak cechujących się lepszą wydajnością. Przykładem była implementacja drzew jako elementu sceny. Początkowo planowano indywidualną proceduralną generację poszczególnych drzew, jednak rozwiązanie to skutkowało znacznym spadkiem wydajności programu. W związku z powyższym zdecydowano się na rozwiązanie w postaci przedstawienia drzew jako elpisoid zniekształconych trójwymiarową funkcją \ang{fBm}.
+
+Przedstawiony projekt można wzbogacić o dodatkowe elementy krajobrazu, na przykład
+poprzez generację struktur takich jak jęziora, rzeki, konstrukcje architektoniczne, itp. Program można rozbudować poprzez zastosowanie bardziej zaawansowanych technik obliczania koloru oraz światła, dla uzsyskania obrazów bardziej odzwierciedlających rzeczywistość oraz zjawiska fizyczne. W niniejszej pracy nie zostały zastosowane techniki pozwalające ograniczyć efekty spowodowane \ang{aliasingiem}, jest to kolejna funkcjonalność o którą można rozbudować ten projekt.
+
+Przy tworzeniu programu napotkano się na wiele problemów, które między innymi związane były z podjęciem decyzji o renderowaniu na karcie graficznej. To z kolei znacząco utrudniło debugowanie programu. Przykładem takiej sytuacji był, przez dłuższy czas nie wykryty błąd matematyczny związany z obliczaniem wartości wektorów normalnych. Jego ujawnienie nastąpiło po implementacji cieni, co wymusiło dokonanie korekty zastosowanych wzorów.
+
+Stworzony projekt miał na celu umożliwić syntezę obrazu jak najbardziej zbliżonego do naturalnego ukształtowania terenu. Zamiarem autora nie było uzyskanie fotorealizmu, a jedynie osiągnięcie przkonujących wyników. Przedstawione możliwości programu mogą być wykorzystane w grach i animacjach, a newet po jego rozbudowie w filmach.
+%% na karcie graficznej - debugowanie jest trudniejsz e
+
+
+%% \begin{itemize}
+%% \item uzyskane wyniki w świetle postawionych celów i zdefiniowanych wyżej wymagań
+%% \item kierunki ewentualnych danych prac (rozbudowa funkcjonalna …)
+%% \item problemy napotkane w trakcie pracy
+%% \end{itemize}

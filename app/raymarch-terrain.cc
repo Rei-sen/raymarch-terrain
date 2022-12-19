@@ -9,7 +9,10 @@ int main(int argc, char **argv) {
 
   glfwInit();
 
-  Application app;
+  {
+    Application app;
 
-  app.run();
+    app.run();
+  }
+  glfwTerminate();
 }

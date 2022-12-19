@@ -2,6 +2,7 @@
 
 #include "renderer.hh"
 
+#include <GL/glext.h>
 #include <glm/gtc/type_ptr.hpp>
 
 #include "rendering/GL/quad.hh"
@@ -38,6 +39,7 @@ Renderer::~Renderer() {}
 void Renderer::update() {}
 
 void Renderer::draw(const Config &c) {
+
   glUseProgram(*program);
   vao.bind();
 
@@ -45,6 +47,7 @@ void Renderer::draw(const Config &c) {
 
   glClearColor(0.0, 0.0, 0.0, 1.0);
   glClear(GL_COLOR_BUFFER_BIT);
+
   glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 }
 
@@ -62,6 +65,8 @@ void Renderer::updateUniforms(const Config &c) {
 
   // Generation
 
+  p = glGetUniformLocation(*program, "terrainMaxSteps");
+  glUniform1i(p, c.generation.terrainMaxSteps);
   p = glGetUniformLocation(*program, "coordinateScaling");
   glUniform1f(p, c.generation.coordinateScaling);
   p = glGetUniformLocation(*program, "amplitude");
@@ -70,8 +75,88 @@ void Renderer::updateUniforms(const Config &c) {
   glUniform1i(p, c.generation.interpolationMethod);
   p = glGetUniformLocation(*program, "layers");
   glUniform1i(p, c.generation.layers);
+  p = glGetUniformLocation(*program, "layerRotation");
+  glUniform1f(p, c.generation.layerRotation);
+  p = glGetUniformLocation(*program, "hurstExp");
+  glUniform1f(p, c.generation.hurstExp);
+
+  p = glGetUniformLocation(*program, "groundColor");
+  glUniform3fv(p, 1, glm::value_ptr(c.generation.groundColor));
+  p = glGetUniformLocation(*program, "skyColor");
+  glUniform3fv(p, 1, glm::value_ptr(c.generation.skyColor));
+
+  p = glGetUniformLocation(*program, "enableGrass");
+  glUniform1i(p, c.generation.enableGrass);
+  p = glGetUniformLocation(*program, "grassStart");
+  glUniform1f(p, c.generation.grassStart);
+  p = glGetUniformLocation(*program, "grassEnd");
+  glUniform1f(p, c.generation.grassEnd);
+  p = glGetUniformLocation(*program, "grassColor");
+  glUniform3fv(p, 1, glm::value_ptr(c.generation.grassColor));
+
+  p = glGetUniformLocation(*program, "sunDir");
+  {
+    auto t = c.generation.sunDir;
+    glUniform3f(p, cos(t.x) * cos(t.y), sin(t.y), sin(-t.x) * cos(t.y));
+  }
+
+  p = glGetUniformLocation(*program, "enableTrees");
+  glUniform1i(p, c.generation.enableTrees);
+  p = glGetUniformLocation(*program, "treesMaxSteps");
+  glUniform1i(p, c.generation.treesMaxSteps);
+  p = glGetUniformLocation(*program, "treeSpacing");
+  glUniform1f(p, c.generation.treeSpacing);
+  p = glGetUniformLocation(*program, "treeRadius");
+  glUniform1f(p, c.generation.treeRadius);
+  p = glGetUniformLocation(*program, "treeHeight");
+  glUniform1f(p, c.generation.treeHeight);
+  p = glGetUniformLocation(*program, "treeHeightOffset");
+  glUniform1f(p, c.generation.treeHeightOffset);
+  p = glGetUniformLocation(*program, "treeLayers");
+  glUniform1i(p, c.generation.treeLayers);
+  p = glGetUniformLocation(*program, "treeDistortionAmplitude");
+  glUniform1f(p, c.generation.treeDistortionAmplitude);
+  p = glGetUniformLocation(*program, "treeDistortionCoordScaling");
+  glUniform1f(p, c.generation.treeDistortionCoordScaling);
+  p = glGetUniformLocation(*program, "treeColor");
+  glUniform3fv(p, 1, glm::value_ptr(c.generation.treeColor));
+  p = glGetUniformLocation(*program, "treeColor2");
+  glUniform3fv(p, 1, glm::value_ptr(c.generation.treeColor2));
+
+  p = glGetUniformLocation(*program, "enableClouds");
+  glUniform1i(p, c.generation.enableClouds);
+  p = glGetUniformLocation(*program, "cloudsMaxSteps");
+  glUniform1i(p, c.generation.terrainMaxSteps);
+  p = glGetUniformLocation(*program, "cloudAltitude");
+  glUniform1f(p, c.generation.cloudAltitude);
+  p = glGetUniformLocation(*program, "cloudHeight");
+  glUniform1f(p, c.generation.cloudHeight);
+  p = glGetUniformLocation(*program, "cloudLayers");
+  glUniform1i(p, c.generation.cloudLayers);
+  p = glGetUniformLocation(*program, "cloudCoordinateScaling");
+  glUniform1f(p, c.generation.cloudCoordinateScaling);
+  p = glGetUniformLocation(*program, "cloudAmplitude");
+  glUniform1f(p, c.generation.cloudAmplitude);
+  p = glGetUniformLocation(*program, "cloudDensityScaling");
+  glUniform1f(p, c.generation.cloudDensityScaling);
+  p = glGetUniformLocation(*program, "treeSurfaceFlatness");
+  glUniform1f(p, c.generation.treeSurfaceFlatness);
 
   // Rendering
   p = glGetUniformLocation(*program, "enableInterpolation");
   glUniform1i(p, c.rendering.enableInterpolation);
+  p = glGetUniformLocation(*program, "enableShadows");
+  glUniform1i(p, c.rendering.enableShadows);
+  p = glGetUniformLocation(*program, "enableSoftShadows");
+  glUniform1i(p, c.rendering.softShadows);
+  p = glGetUniformLocation(*program, "softShadowRange");
+  glUniform1f(p, c.rendering.softShadowRange);
+
+  p = glGetUniformLocation(*program, "numericalNormals");
+  glUniform1i(p, c.rendering.numericalNormals);
+
+  p = glGetUniformLocation(*program, "enableSunGlare");
+  glUniform1i(p, c.rendering.enableSunGlare);
+  p = glGetUniformLocation(*program, "sunGlareColor");
+  glUniform3fv(p, 1, glm::value_ptr(c.rendering.sunGlareColor));
 }

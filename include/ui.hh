@@ -22,4 +22,9 @@ private:
   void showGenerationSettings(GenerationSettings &gen);
   void showRenderingSettings(RenderingSettings &rend);
   void showUIHelp();
+  void showStats();
+
+  double lastTime;
+  int frames = 0;
+  double framerate = 0;
 };

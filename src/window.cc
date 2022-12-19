@@ -8,19 +8,23 @@
 
 #include <GLFW/glfw3.h>
 
-static void glfwErrorCallback(int e, const char *text);
-static void glfwWindowCloseCallback(GLFWwindow *w);
+static void errorCallback(int e, const char *text);
+static void windowCloseCallback(GLFWwindow *w);
 
-void glfwErrorCallback(int e, const char *text) {
+void errorCallback(int e, const char *text) {
   std::cerr << "GLFW error: " << e << " " << text << std::endl;
 }
 
-void glfwWindowCloseCallback(GLFWwindow *w) { glfwSetWindowShouldClose(w, 1); }
+void windowCloseCallback(GLFWwindow *w) { glfwSetWindowShouldClose(w, 1); }
+
+void framebufferSizeCallback(GLFWwindow *w, int width, int height) {
+  glViewport(0, 0, width, height);
+}
 
 Window::Window() : Window(800, 600) {}
 
 Window::Window(unsigned width, unsigned height) {
-  glfwSetErrorCallback(glfwErrorCallback);
+  glfwSetErrorCallback(errorCallback);
 
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -33,7 +37,8 @@ Window::Window(unsigned width, unsigned height) {
   }
 
   glfwMakeContextCurrent(w);
-  glfwSetWindowCloseCallback(w, glfwWindowCloseCallback);
+  glfwSetWindowCloseCallback(w, windowCloseCallback);
+  glfwSetFramebufferSizeCallback(w, framebufferSizeCallback);
   // glfwSetInputMode(w, GLFW_STICKY_MOUSE_BUTTONS, GLFW_TRUE);
 
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
@@ -41,10 +46,7 @@ Window::Window(unsigned width, unsigned height) {
   }
 }
 
-Window::~Window() {
-  glfwDestroyWindow(w);
-  ;
-}
+Window::~Window() { glfwDestroyWindow(w); }
 
 bool Window::shouldClose() const { return glfwWindowShouldClose(w); }
 
