@@ -2,15 +2,18 @@
 
 W niniejszym opracowaniu zostaną przedstawione zagadnienia związane z~renderowaniem scen z wykorzystaniem metody ray marching oraz techniką tworzenia proceduralnie generowanego terenu.
 
-Rozwiązania tego typu mogą być wykorzystywane w~obszarach związanych z~tworzeniem filmów, gier komputerowych, animacji itp. Ta metoda renderowania na dzień dzisiejszy nie jest jeszcze zbyt powszechna, a przynajmniej nie w takim stopniu jak metody oparte o rasteryzację trójkątów czy ray tracing.
+Rozwiązania tego typu mogą być wykorzystywane w~obszarach związanych z~tworzeniem filmów, gier komputerowych, animacji itp. Ta metoda renderowania na~dzień dzisiejszy nie jest jeszcze zbyt powszechna, a przynajmniej nie w takim stopniu jak metody oparte o rasteryzację trójkątów czy ray tracing.
 
-Biorąc pod uwagę sposób działania technik renderowania opartych o wiązki światła, przedstawienie generowanego terenu wykorzystując siatkę trójkątów nie jest wydajnym rozwiązaniem. Wiąże się to z ilością obliczeń koniecznych do wykrycia kolizji z każdym trójkątem siatki dla każdej wiązki światła. Znacznie lepszym  i wydajniejszym rozwiązaniem jest przedstawienie terenu jako funkcji matematycznej.
+Istnieje wiele technik proceduralnego generowania terenu\cite{bib:aaptg}. Jedną z~najpopularniejszych metod jest zastosowanie funkcji szumu takich jak szum Perlina czy~szumy simplex w celu reprezentacji wysokości terenu, a następne wykorzystanie fizycznych modeli erozji terenu \cite{bib:phys}\cite{bib:ptg}. Metoda ta pozawala na uzyskanie realistycznych wyników jednak wiąże się to z przeprowadzeniem dużej ilości obliczeń. Kolejną metodą może być implementacja algorytmów ewolucyjnych, w których osobniki poddawane są funkcji oceny oraz dalszej ewolucji w celu osiągnięcia zadowalających efektów \cite{bib:evo}. Wadą tej metody jest trudność kontroli uzyskiwanych efektów~oraz potrzeba implementacji dobrej funkcji oceny. Efektem zastosowania powyższych metod zwykle jest uzyskanie siatki punktów lub trójkątów reprezentujących wysokość terenu w~danym punkcie.
+
+Biorąc pod uwagę sposób działania technik renderowania opartych o wiązki światła, przedstawienie generowanego terenu z wykorzystaniem siatki trójkątów, nie jest wydajnym rozwiązaniem. Wiąże się to z ilością obliczeń koniecznych do wykrycia kolizji z każdym trójkątem siatki dla każdej wiązki światła. Znacznie lepszym  i wydajniejszym rozwiązaniem jest przedstawienie terenu jako funkcji matematycznej.
 
 Do kształtowania terenu w pierwszej kolejności zostanie wykorzystana funkcja zwracająca pseudolosową wartość dla danego dwuwymiarowego punktu\cite{bib:iqterrain}.
-W tym celu można użyć z wielu różnych metod, przykładowo wykorzystując dwuwymiarową teksturę
-lub funkcję matematyczną której wyniki przypominają losowe wartości. Aby uzyskać ciągłą funkcję, wartość każdego punktu jest interpolowana na podstawie czterech najbliższych punktów, których współrzędne są wartościami całkowitymi.
+W tym celu można użyć wielu różnych metod, przykładowo wykorzystując dwuwymiarową teksturę
+lub funkcję matematyczną, której wyniki przypominają losowe wartości. Aby uzyskać ciągłą funkcję, wartość każdego punktu jest interpolowana na podstawie czterech najbliższych punktów, których współrzędne są wartościami całkowitymi.
 
-Aby uzyskać pożądany efekt zaimplementowana została interpolacja biliniowa opisana wzorem \ref{eq:interp-biliniowa}, dla wybranych punktów $a, b, c$ i $d$. Jako parametry tej funkcji $x$ i $y$ należą do przedziału $x, y \in [0, 1]$. Przykład tego rodzaju interpolacji przedstawia rysunek \ref{fig:lerp}.
+Aby uzyskać pożądany efekt, zaimplementowana została interpolacja biliniowa opisana wzorem \ref{eq:interp-biliniowa}, dla wybranych punktów $a, b, c$ i $d$. Jako parametry tej funkcji $x$ i $y$ należą do~przedziału $x, y \in [0, 1]$. Przykład tego rodzaju interpolacji przedstawia rysunek \ref{fig:lerp}.
+
 \begin{equation}[H]
 \label{eq:interp-biliniowa}
   \begin{split}
@@ -23,15 +26,15 @@ Aby uzyskać pożądany efekt zaimplementowana została interpolacja biliniowa o
 
 Można zauważyć, że efektem tej interpolacji są bardzo widoczne granice między grupami punktów, co przedstawia rysunek \ref{fig:linterp-edges}.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.65\textwidth]{./graf/ilin-edges.png}
+\includegraphics[width=1\textwidth]{./graf/ilin-edges.png}
 \caption{Konfiguracja systemu budowy dla środowiska Visual Studio 16.}
 \label{fig:linterp-edges}
 \end{figure}
 
 
-Rozwiązaniem tego problemu jest zastosowanie funkcji \ang{smoothstep} pozwalającej na uzyskanie wygładzonej interpolacji. W tym celu zmodyfikowano wzór \ref{eq:interp-biliniowa}, zastępując parametry $x$ i $y$ wykorzystując funkcję \ang{smoothstep} $n$-tego stopnia przedstawionej jako $S_n(p)$. Ostateczną postać funkcji przedstawia wzór \ref{eq:smooth-interp}. Obliczając gradient tej funkcji, można zauważyć, że wartości pochodnej dla każdego z czterech granicznych punktów jest równa $0$, dzięki czemu przejścia między grupami punktów nie są widoczne.
+Rozwiązaniem tego problemu jest zastosowanie funkcji \ang{smoothstep} pozwalającej na~uzyskanie wygładzonej interpolacji. W tym celu zmodyfikowano wzór \ref{eq:interp-biliniowa}, zastępując parametry $x$ i $y$ z wykorzystaniem funkcji \ang{smoothstep} $n$-tego stopnia przedstawionej jako $S_n(p)$. Ostateczną postać funkcji przedstawia wzór \ref{eq:smooth-interp}. Obliczając gradient tej~funkcji, można zauważyć, że wartości pochodnej dla każdego z czterech granicznych punktów jest równa $0$, dzięki czemu przejścia między grupami punktów nie są widoczne.
 
 \begin{equation}
 \label{eq:smooth-interp}
@@ -98,7 +101,7 @@ float fbm(vec2 p) {
 \label{fig:pseudokod:fbm}
 \end{figure}
 
-Kod z rysunku \ref{fig:pseudokod:fbm} został zmodyfikowany tak by zoptymalizować czas wykonania i uniknąć wykorzystania funkcji \ang{pow}\cite{bib:glslpow}. Wynikiem jest pseudokod z rysunku \ref{fig:pseudokod:fbm-opt}.
+Kod z rysunku \ref{fig:pseudokod:fbm} został zmodyfikowany tak, by zoptymalizować czas wykonania i~uniknąć wykorzystania funkcji \ang{pow}\cite{bib:glslpow}. Wynikiem jest pseudokod z rysunku \ref{fig:pseudokod:fbm-opt}.
 
 \begin{figure}[H]
 \centering
@@ -121,7 +124,7 @@ float fbm(vec2 p) {
 \label{fig:pseudokod:fbm-opt}
 \end{figure}
 
-Po zastosowaniu powyższych działań uzyskano znacznie bardziej naturalny wynik. Dalsza analiza wygenerowanego terenu wykorzystując interpolację biliniową, przedstawiona na rysunku \ref{fig:fbm-bilin-align}, nasuwa wnioski, że wszystkie odkształcenia terenu biegną w jednej linii, co wpływa na naturalizm terenu. Aby uniknąć takiej sytuacji zmodyfikowano algorytm \ang{fBm} by oprócz skalowania współrzędnych punktu, zostały one także obrócone względem środka układu współrzędnych.
+Po zastosowaniu powyższych działań uzyskano znacznie bardziej naturalny wynik. Dalsza analiza wygenerowanego terenu wykorzystująca interpolację biliniową, przedstawiona na rysunku \ref{fig:fbm-bilin-align}, nasuwa wnioski, że wszystkie odkształcenia terenu biegną w jednej linii, co wpływa negatywnie na naturalizm terenu. Aby uniknąć takiej sytuacji, zmodyfikowano algorytm \ang{fBm} by oprócz skalowania współrzędnych punktu, zostały one także obrócone względem środka układu współrzędnych.
 
 \begin{figure}
 \centering
@@ -129,6 +132,17 @@ Po zastosowaniu powyższych działań uzyskano znacznie bardziej naturalny wynik
 \caption{Wynik zastosowania \ang{fBm} dla 10 oktaw, z wykorzystaniem interpolacji biliniowej.}
 \label{fig:fbm-bilin-align}
 \end{figure}
+
+Efekt końcowy zastosowanej techniki uwidoczniono na rysunku \ref{fig:gen-end}. Technika ta bardzo dobrze nadaje się do wykorzystania wraz z technikami renderowania opartymi o~wiązki światła. Reprezentacja terenu jako funkcji matematycznej o nieskończonej domenie sprawia, że praktycznie brak jest ograniczeń w rozmiarze generowanego terenu. Dodatkowo wykorzystywana jest bardzo niewielka ilość pamięci do przechowywania takiego terenu. Zastosowanie techniki \ang{fBm} sprawia, że możliwe jest dokonywanie zmiany poziomu szczegółów terenu w zależności od odległości od kamery.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{./graf/gen-end.png}
+\caption{Końcowy efekt kształtowania terenu.}
+\label{fig:gen-end}
+\end{figure}
+
+Jedną z większych wad przedstawionej techniki jest bardzo ograniczona możliwość kontroli nad kształtem uzyskanego terenu. Rozwiązanie to dobrze sprawdza się w przypadku kształtowania górzystego terenu, jednak nie nadaje się do przedstawienia innego rodzaju krajobrazów.
 
 %% \begin{itemize}
 %% \item sformułowanie problemu

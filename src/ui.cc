@@ -125,6 +125,8 @@ void UI::showGenerationSettings(GenerationSettings &gen) {
     ImGui::Text("Trees");
     ImGui::Checkbox("Enable trees", &gen.enableTrees);
     ImGui::InputInt("Max tree rendering steps", &gen.treesMaxSteps);
+    ImGui::SliderFloat("Max tree generation distance", &gen.maxTreeDist, 0.0,
+                       255.0);
     ImGui::InputFloat("Tree spacing", &gen.treeSpacing);
     ImGui::InputFloat("Tree radius", &gen.treeRadius);
     ImGui::InputFloat("Tree height", &gen.treeHeight);
@@ -180,6 +182,12 @@ void UI::showRenderingSettings(RenderingSettings &rend) {
     ImGui::Checkbox("Numerical normals", &rend.numericalNormals);
     ImGui::Checkbox("Enable sun glare", &rend.enableSunGlare);
     ImGui::ColorEdit3("Sun glare color", glm::value_ptr(rend.sunGlareColor));
+
+    ImGui::Checkbox("Render raymarching iterations",
+                    &rend.enableRenderingIterations);
+    ImGui::BeginDisabled(!rend.enableRenderingIterations);
+    ImGui::InputInt("Max raymarching iterations", &rend.maxRenderIterations);
+    ImGui::EndDisabled();
 
     ImGui::EndTabItem();
   }

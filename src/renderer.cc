@@ -104,6 +104,8 @@ void Renderer::updateUniforms(const Config &c) {
   glUniform1i(p, c.generation.enableTrees);
   p = glGetUniformLocation(*program, "treesMaxSteps");
   glUniform1i(p, c.generation.treesMaxSteps);
+  p = glGetUniformLocation(*program, "treesMaxDistance");
+  glUniform1f(p, c.generation.maxTreeDist);
   p = glGetUniformLocation(*program, "treeSpacing");
   glUniform1f(p, c.generation.treeSpacing);
   p = glGetUniformLocation(*program, "treeRadius");
@@ -159,4 +161,9 @@ void Renderer::updateUniforms(const Config &c) {
   glUniform1i(p, c.rendering.enableSunGlare);
   p = glGetUniformLocation(*program, "sunGlareColor");
   glUniform3fv(p, 1, glm::value_ptr(c.rendering.sunGlareColor));
+
+  p = glGetUniformLocation(*program, "renderIterations");
+  glUniform1i(p, c.rendering.enableRenderingIterations);
+  p = glGetUniformLocation(*program, "maxRenderIterations");
+  glUniform1i(p, c.rendering.maxRenderIterations);
 }

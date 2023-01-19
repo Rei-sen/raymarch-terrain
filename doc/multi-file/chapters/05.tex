@@ -2,8 +2,8 @@
 \label{ch:05}
 
 \section{Architektura systemu oraz przedstawienie idei}
-Do realizacji projektu wykorzystano język C++ oraz bibliotekę OpenGL. Do kompilacji programu wykorzystano system budowy CMake. Kod odpowiadający za renderowanie obrazu napisany został w języku GLSL i wykonywany jest na karcie graficznej.
-W pierwszej kolejności następuje utworzenie okna programu z wykorzystaniem biblioteki GLFW. Kolejny krok to inicjalizacja biblioteki OpenGL przy wykorzystaniu biblioteki GLAD i rozpoczęcie głównej pętli programu, w której obsługiwane są następujące czynności:
+Do realizacji projektu wykorzystano język C++ oraz bibliotekę OpenGL. Do~kompilacji programu wykorzystano system budowy CMake. Kod odpowiadający za~renderowanie obrazu napisany został w języku GLSL i wykonywany jest na karcie graficznej.
+W pierwszej kolejności następuje utworzenie okna programu z~wykorzystaniem biblioteki GLFW. Kolejny krok to inicjalizacja biblioteki OpenGL przy~wykorzystaniu biblioteki GLAD i rozpoczęcie głównej pętli programu, w której obsługiwane są następujące czynności:
 \begin{itemize}
 \item obsługa klawiatury i myszki,
 \item wyświetlenie i obsługa interfejsu użytkownika,
@@ -12,23 +12,24 @@ W pierwszej kolejności następuje utworzenie okna programu z wykorzystaniem bib
 \item wyświetlenie uzyskanego obrazu.
 \end{itemize}
 
-Informacje o konfiguracji przekazywane są do jednostek cieniujących przy wykorzystaniu zmiennych typu \ang{uniform}. Jednostka cieniująca wierzchołków tworzy prostokąt pokrywający cały ekran, na którym odbywa się renderowanie obrazu. Całość renderowania odbywa się w jednostce cieniującej fragmentów. Pierwszym etapem jest obliczenie początkowej pozycji wiązki światła oraz jej kierunek dla każdego piksela. Uzyskane w ten sposób informacje o wiązce światła przekazywane są do fukncji \ang{render}. Funkcja ta odpowiada za następujące czynności:
+Informacje o konfiguracji przekazywane są do jednostek cieniujących przy~wykorzystaniu zmiennych typu \ang{uniform}. Jednostka cieniująca wierzchołków tworzy prostokąt pokrywający cały ekran, na którym odbywa się renderowanie obrazu. Całość renderowania odbywa się w jednostce cieniującej fragmentów. Pierwszym etapem jest~obliczenie początkowej pozycji wiązki światła oraz jej kierunek dla każdego piksela. Uzyskane w ten sposób informacje o wiązce światła przekazywane są do funkcji \ang{render}. Funkcja ta odpowiada za następujące czynności:
 \begin{itemize}
 \item wywołanie funkcji algorytmu raymarching,
 \item uzyskanie wektorów normalnych,
-\item obliczenie koloru w zależności od rodzaju przeciętej wiązką światłą powierzchni,
+\item obliczenie koloru w zależności od rodzaju przeciętej wiązką światła powierzchni,
 \item obliczenia związane z cieniem i cieniowaniem,
 \item obliczenie końcowego koloru danego piksela,
 \item zastosowanie korekcji gamma.
 \end{itemize}
 
 \section{Przegląd ważniejszych klas oraz struktur danych}
-W programie jedną najważniejszych jest klasa \ang{Application}, która odpowiada za inicjalizację całego programu oraz wykorzystanych bibliotek. Klasa ta zawiera główną pętlę programu, dodatkowo odpowiada za obsługę klawiatury i myszki. Deklaracja tej klasy została przedstawiona na rysunku \ref{fig:c++:application}.
+W programie jedną najważniejszych jest klasa \ang{Application}, która odpowiada za~inicjalizację całego programu oraz wykorzystanych bibliotek. Klasa ta zawiera główną pętlę programu, dodatkowo odpowiada za obsługę klawiatury i myszki. Deklaracja tej klasy została przedstawiona na rysunku \ref{fig:c++:application}.
 
 \begin{figure}[H]
 \centering
 \begin{lstlisting}[language=C++]
-class Application {
+class Application
+{
 public:
   Application();
   ~Application();
@@ -52,8 +53,8 @@ Równie ważną jest klasa \ang{Renderer}, która odpowiada za inicjalizację 
 \begin{figure}[H]
 \centering
 \begin{lstlisting}[language=C++]
-
-class Renderer {
+class Renderer
+{
 public:
   Renderer();
   ~Renderer();
@@ -80,7 +81,8 @@ Deklaracja tej klasy widoczna jest na rysunku \ref{fig:c++:window}.
 \begin{figure}[H]
 \centering
 \begin{lstlisting}[language=C++]
-class Window {
+class Window
+{
 public:
   Window();
   Window(unsigned width, unsigned height);
@@ -102,15 +104,16 @@ private:
 
 \section{Przegląd ważniejszych algorytmów}
 
-Algorytm \ang{raymarching} jest najważniejszym z algorytmów wykorzystanych w programie. Jego rola polega na stopniowym
-przesuwaniu wiązki światła do momentu przecięcia z dowolnym punktem powierzchni sceny. Sam algorytm wykorzystuje podane parametry, którymi są początkowa pozycja wiązki światła oraz jej kierunek. Jego końcowy wynik to odległość, którą musi przebyć wiązka by preciąć najbliższą powierzchnię. Algorytm ten wykorzystuje pomocniczą funkcję
+Algorytm \ang{raymarching} jest najważniejszym z algorytmów wykorzystanych w~programie. Jego rola polega na stopniowym
+przesuwaniu wiązki światła do momentu przecięcia z dowolnym punktem powierzchni sceny. Sam algorytm wykorzystuje podane parametry, którymi są początkowa pozycja wiązki światła oraz jej kierunek. Jego~końcowy wynik to odległość, którą musi przebyć wiązka by preciąć najbliższą powierzchnię. Algorytm ten wykorzystuje pomocniczą funkcję
 \ang{map()}, która zwraca odległość między podanym punktem a najbliższą powierzchnią sceny. Kod tej funkcji zmienia się w zależności od renderowanej sceny, dlatego pominięto jej pseudokod.
 Rysunek \ref{fig:pseudokod:raymarching} przedstawia pseudokod tego algorytmu.
 
 \begin{figure}[H]
 \centering
 \begin{lstlisting}[language=C]
-float raymarch(vec3 rayOrigin, vec3 rayDirection) {
+float raymarch(vec3 rayOrigin, vec3 rayDirection)
+{
   float distance = 0.0;
 
   for (int i = 0; i < MAX_STEPS; i++) {
@@ -125,7 +128,6 @@ float raymarch(vec3 rayOrigin, vec3 rayDirection) {
       break;
     }
   }
-
   return MAX_DIST;
 }
 \end{lstlisting}
@@ -133,18 +135,17 @@ float raymarch(vec3 rayOrigin, vec3 rayDirection) {
 \label{fig:pseudokod:raymarching}
 \end{figure}
 
-Aby uzyskać efekt cienia, wykorzystano modyfikację tego algorytmu, w punkcie przecięcia wiązki wysyłana nowa wiązka skierowana w kierunku źródła światła. Na podstawie informacji o przecięciu ze sceną tej wiązki można określić czy dany punkt jest oświetlony. Dodatkowo wykorzystując wzór \ref{eq:r-shadow} można uzyskać efekt ,,miękkich'' cieni przy niewielkim koszcie obliczeń \cite{bib:iqsoftshadow}.
+Aby uzyskać efekt cienia, wykorzystano modyfikację tego algorytmu, w punkcie przecięcia wiązki zostaje wysłana nowa wiązka skierowana w kierunku źródła światła. Na~podstawie informacji o przecięciu ze sceną tej wiązki można określić czy dany punkt jest~oświetlony. Dodatkowo wykorzystując wzór \ref{eq:r-shadow} można uzyskać efekt ,,miękkich'' cieni przy niewielkim koszcie obliczeń \cite{bib:iqsoftshadow}.
+Rysunek \ref{fig:pseudokod:shadow} przedstawia pseudokod z~wykorzystaniem ,,miękkich'' cieni.
 \begin{equation}
 \label{eq:r-shadow}
 r = min(\frac{map(p)}{\text{distance}})
 \end{equation}
-Rysunek \ref{fig:pseudokod:shadow} przedstawia pseudokod z wykorzystaniem ,,miękkich'' cieni.
 \begin{figure}[H]
 \centering
 \begin{lstlisting}[language=C]
-
-float shadow(vec3 rayOrigin) {
-
+float shadow(vec3 rayOrigin)
+{
   float distance = 0.0;
   float minR = MAX_DIST;
 
@@ -164,7 +165,7 @@ float shadow(vec3 rayOrigin) {
   }
   return smoothstep(0.0, 1.0, minR);
 }
-\end{lstlisting}[H]
+\end{lstlisting}
 \caption{Pseudokod modyfikacji algorytmu \ang{raymarching} wykorzystany do obliczenia cieni.}
 \label{fig:pseudokod:shadow}
 \end{figure}
@@ -183,6 +184,57 @@ Różnice wynikające z zastosowania wzoru \ref{eq:r-shadow} przedstawia rysunek
 \caption{Porównanie wyników metod renderowania cieni}
 \label{fig:shadow-comp}
 \end{figure}
+
+Kolejną wykorzystaną modyfikacją algorytmu raymarching jest funkcja odpowiadająca za renderowanie chmur, której pseudokod jest widoczny na rysunku \ref{fig:pseudokod:cloud}. Działanie takie, sprawia, że algorytm przecinając powierzchnię nie przerywa pracy, a zaczyna obliczać jej średnią gęstość. Efektem takiego rozwiązania jest uzysanie bardziej naturalnego wyglądu chmur, jak to przedstwiono na rysunku \ref{fig:clouds}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{./graf/clouds.png}
+\caption{Renderowanie chmur.}
+\label{fig:clouds}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{lstlisting}[language=C]
+vec4 raymarchClouds(vec3 ro, vec3 rd)
+{
+  float depth = 0.0; // total traveled distance
+  float prec = EPSILON; // precision
+  float density = 0.0;
+  int densitySamples = 0;
+  float absorption = 100.0;
+  vec3 color = vec3(0.0);
+  float hit = 0.0;
+
+  for (int i = 0; i < cloudsMaxSteps; i++) {
+    vec3 pos = ro + rd * depth;
+    if (rd.y > 0 && pos.y > (cloudAltitude + cloudHeight)) break;
+    if (rd.y < 0 && pos.y < (cloudAltitude - cloudHeight)) break;
+
+    float d = cloudMap(pos);
+    if (d < 0) {
+      hit = 1.0;
+      density += cloudDensityScaling * abs(d);
+      densitySamples += 1;
+      depth += STEP_SIZE;
+    } else {
+      depth += abs(d);
+    }
+  }
+  if (densitySamples > 0)
+    color = vec3(1.0) * smoothstep(0.0, 1.0, density/densitySamples);
+  return vec4(hit, color);
+}
+\end{lstlisting}
+\caption{Pseudokod modyfikacji algorytmu \ang{raymarching} wykorzystany do~renderowania chmur.}
+\label{fig:pseudokod:cloud}
+\end{figure}
+
+
+
+
+
 
 
 %% \subchapter{Szczególy implementacji wybranych fragmentów kodu}

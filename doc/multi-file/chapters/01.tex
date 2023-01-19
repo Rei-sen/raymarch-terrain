@@ -7,12 +7,12 @@
 %% \item osadzenie problemu w~dziedzinie
 %% \item Wprowadzenie
 %% \section{Wprowadzenie}
-Przedmiotem niniejszej pracy jest przedstawienie metody renderowania metodą ray marching dla~problemu renderowania trójwymiarowego terenu.
+Przedmiotem niniejszej pracy jest przedstawienie sposobu renderowania metodą ray marching dla~problemu renderowania trójwymiarowego terenu.
 %% jest techniką modelowania światła, pozwalająca na~generowanie obrazów...
 %% technika oparta
-Ray marching jest to technika generowania obrazów dla~dwuwymiarowych oraz trójwymiarowych scen\cite{bib:gcraymarch}.
+Ray marching jest~to~technika generowania obrazów dla~dwuwymiarowych oraz trójwymiarowych scen\cite{bib:gcraymarch}.
 Działanie metody ray marching, podobnie do metody ray tracing, polega na~odnalezieniu przecięcia wiązek światła wraz~z~renderowaną sceną.
-Rozwiązania oparte o~wiązki światła dość dobrze odwzorowują rzeczywistość dzięki czemu można w~dość prosty sposób uzyskać fotorealistyczny obraz.
+Rozwiązania oparte o~wiązki światła dość dobrze odwzorowują rzeczywistość, dzięki czemu można w~dość prosty sposób uzyskać fotorealistyczny obraz.
 Techniki tego typu świetnie radzą sobie z~problemami takimi jak odbicia czy~załamania światła, których efekt znacznie trudniej jest osiągnąć w~rozwiązaniach opartych o~rasteryzacje trójkątów.
 Największą wadą tego rodzaju renderowania jest ich złożoność obliczeniowa. W~najprostszym przypadku z~kamery wysyłana jest jedna wiązka odpowiadająca każdemu pikselowi, dla~której trzeba obliczyć przecięcia z całą sceną.
 Czas działania znacząco pogarsza się wraz~z~implementacją cieniowania, odbić światła, przezroczystości, załamania światła, efektów wolumetrycznych i innych działań poprawiających jakość oraz realizm tworzonego obrazu.
@@ -24,11 +24,11 @@ Oznacza to, że punkt przecięcia można uzyskać przez rozwiązanie wzoru matem
 Pomimo istnienia analitycznych rozwiązań przecięć z~niektórymi powierzchniami (np. z~kulą, z~trójkątem), brak jest rozwiązania
 pozwalającego na~proste znalezienie przecięcia z~dowolną powierzchnią.
 
-Alternatywą dla~metod analitycznych jest technika ray marching. Jest to numeryczna metoda estymacji przecięć
+Alternatywą dla~metod analitycznych jest technika ray marching. Jest~to~numeryczna metoda estymacji przecięć
 wiązki światła z~dowolną powierzchnią\cite{bib:gpugems2}\cite{bib:spheretracing}.
 Technika ta polega na~sukcesywnym przesuwaniu wiązki światła o~daną odległość do momentu przecięcia z~powierzchnią.
-Rozwiązanie to jest dość wolne oraz niedokładne, jednak istnieją różnego rodzaju optymalizacje
-pozwalające poprawić dokładność oraz szybkość algorytmu\cite{bib:Liktor2008RayTI} (takie~jak: sphere tracing, bounding spheres, itp.)
+Rozwiązanie to jest dość wolne oraz~niedokładne, jednak istnieją różnego rodzaju optymalizacje
+pozwalające poprawić dokładność oraz szybkość algorytmu\cite{bib:Liktor2008RayTI} (takie~jak: sphere tracing, bounding spheres, itp.).
 
 %% \item cel pracy
 %% \section{Cel pracy}

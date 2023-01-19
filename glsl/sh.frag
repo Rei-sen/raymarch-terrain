@@ -32,6 +32,7 @@ uniform vec3 grassColor;
 // Tree
 uniform int enableTrees;
 uniform int treesMaxSteps;
+uniform float treesMaxDistance;
 uniform float treeSpacing;
 uniform float treeRadius;
 uniform float treeHeight;
@@ -48,6 +49,7 @@ uniform int cloudLayers;
 uniform float cloudCoordinateScaling;
 uniform float cloudAmplitude;
 uniform float cloudDensityScaling;
+
 uniform float treeDistortionAmplitude;
 uniform float treeDistortionCoordScaling;
 uniform float treeSurfaceFlatness;
@@ -60,6 +62,8 @@ uniform float softShadowRange;
 uniform int numericalNormals;
 uniform int enableSunGlare;
 uniform vec3 sunGlareColor;
+uniform int renderIterations;
+uniform int maxRenderIterations;
 
 const int MAX_STEPS = 256;
 const float MIN_DIST = 0.0;
@@ -320,11 +324,12 @@ float terrainShadow(vec3 ro) {
 }
 
 
-vec4 raymarchTerrain_d(vec3 ro, vec3 rd) {
+vec4 raymarchTerrain_d(vec3 ro, vec3 rd, inout int iterations) {
   vec3 delta = vec3(0.0,0.0,0.0);
   float depth = 0.0; // total traveled distance
   float prec = EPSILON; // precision
   for (int i = 0; i < terrainMaxSteps; i++) {
+    iterations += 1;
     vec3 pos = ro + rd * depth;
     vec4 env = terrainMap_d(pos.xz);
     float h = pos.y - env.x;
@@ -386,17 +391,18 @@ float treeMap(vec3 p) {
     return sdEllipsoid(dif, vec3(treeRadius, treeHeight, treeRadius)) + s;
 }
 
-float raymarchTrees(vec3 ro, vec3 rd) {
+float raymarchTrees(vec3 ro, vec3 rd, inout int iterations) {
   float depth = 0.0; // total traveled distance
   float prec = EPSILON; // precision
   for (int i = 0; i < treesMaxSteps; i++) {
+    iterations += 1;
     vec3 pos = ro + rd * depth;
     float d = treeMap(pos);
     depth += d * 0.7;
     prec = max(EPSILON, depth * EPSILON);
 
     if (abs(d) < prec) return depth;
-    if (depth > MAX_DIST) break;
+    if (depth > treesMaxDistance) break;
   }
   return MAX_DIST;
 }
@@ -428,7 +434,7 @@ float treeShadow(vec3 ro) {
     if (abs(d) < prec )
         return 0.0;
 
-    if (d > MAX_DIST) break;
+    if (d > treesMaxDistance) break;
   }
   if (enableSoftShadows)
       return smoothstep(0.0, 1.0, softShadowRange * minR);
@@ -447,7 +453,7 @@ float cloudMap(vec3 p) {
   return d + f;
 }
 
-vec4 raymarchClouds(vec3 ro, vec3 rd) {
+vec4 raymarchClouds(vec3 ro, vec3 rd, inout int iterations) {
   // vec3 delta = vec3(0.0,0.0,0.0);
   float depth = 0.0; // total traveled distance
   float prec = EPSILON; // precision
@@ -462,6 +468,7 @@ vec4 raymarchClouds(vec3 ro, vec3 rd) {
   vec3 color = vec3(0.0);
   float hit = 0.0;
   for (int i = 0; i < cloudsMaxSteps; i++) {
+    iterations += 1;
     vec3 pos = ro + rd * depth;
     if (rd.y > 0 && pos.y > (cloudAltitude + cloudHeight)) break;
     if (rd.y < 0 && pos.y < (cloudAltitude - cloudHeight)) break;
@@ -495,21 +502,20 @@ vec4 raymarchClouds(vec3 ro, vec3 rd) {
 }
 
 float shadow(vec3 ro) {
-    float s = 1.0;
-    if (true) {
-        s = min(s, terrainShadow(ro));
-    }
-    if (true && enableTrees == 1) {
-        s = min(s, treeShadow(ro));
-    }
+  float s = 1.0;
+  s = min(s, terrainShadow(ro));
+  if (enableTrees == 1) {
+    s = min(s, treeShadow(ro));
+  }
 
-    return s;
+  return s;
 }
 
 // ro - ray origin
 // rd - ray direction
 vec4 render(vec3 ro, vec3 rd) {
 
+  int iterations = 0;
   vec4 d = vec4(MAX_DIST);
   int obj = 0; // object hit
   vec3 col = clamp(skyColor * mix(1.0, 0.6, rd.y), 0.0, 1.0);
@@ -517,7 +523,8 @@ vec4 render(vec3 ro, vec3 rd) {
   vec4 t;
 
   // terrain
-  t = raymarchTerrain_d(ro, rd);
+  t = raymarchTerrain_d(ro, rd, iterations);
+  iterations += iterations;
   d = t;
   // vec4 t = vec4(MAX_DIST);
   if (t.x < MAX_DIST) {
@@ -526,7 +533,8 @@ vec4 render(vec3 ro, vec3 rd) {
   }
 
   if (enableTrees == 1) {
-    float tt = raymarchTrees(ro, rd);
+    float tt = raymarchTrees(ro, rd, iterations);
+    iterations += iterations;
     if (tt < d.x && tt < MAX_DIST) {
       d.x = tt;
       d.yzw = treeNormal(ro + rd * tt);
@@ -535,7 +543,8 @@ vec4 render(vec3 ro, vec3 rd) {
   }
 
   if (enableClouds == 1) {
-    vec4 cd = raymarchClouds(ro, rd);
+    vec4 cd = raymarchClouds(ro, rd, iterations);
+    iterations += iterations;
     if (cd.x > 0.0) {
       // col = vec3(1.0) * clamp(dot(cd.yzw, sunDir), 0.0, 1.0);
       col += cd.yzw;
@@ -593,7 +602,15 @@ vec4 render(vec3 ro, vec3 rd) {
   if (enableSunGlare == 1) {
     col += pow(max(dot(rd, sunDir), 0.0), 4) * sunGlareColor;
   }
-  // col += pow(max(dot(rd, sunDir), 0.0), 4) * vec3(1.0, 0.7, 0.3)/4;
+
+  if (renderIterations == 1) {
+    int m = maxRenderIterations;
+    if (iterations < m) {
+      col = mix(vec3(0.0, 0.0, 1.0), vec3(1.0, 1.0, 0.0), smoothstep(0.0, 1.0, float(iterations) / m));
+    } else {
+      col = mix(vec3(1.0, 1.0, 0.0), vec3(1.0, 0.0, 0.0), smoothstep(0.0, 1.0, float(iterations - m) / m));
+    }
+  }
   col = pow(col, vec3(1.0/2.2));
 
   return vec4(col, 1.0);

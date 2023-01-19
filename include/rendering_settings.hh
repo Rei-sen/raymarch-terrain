@@ -12,4 +12,6 @@ struct RenderingSettings {
   bool numericalNormals = false;
   bool enableSunGlare = true;
   glm::vec3 sunGlareColor{0.25, 0.175, 0.075};
+  bool enableRenderingIterations = false;
+  int maxRenderIterations = 255;
 };

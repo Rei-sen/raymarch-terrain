@@ -1,14 +1,43 @@
 \chapter{Weryfikacja i walidacja}
 \label{ch:06}
 
-Z uwagi na implementację programu na karcie graficznej jako jednostkę cieniującą fragmentów, weryfikacja poprawności jego działania jest znacznie utrudniona. Programując w języku GLSL brak jest możliwości zastosowania testów jednostkowych, co spowodowało, że testowanie sprowadzało się do metody prób i błędów. Przeprowadzono porówynywania różnych technik i wzorów by uzyskać pożądany efekt. Ewentualne niepoprawne obliczenia są często niewidoczne mimo wydawało by się poprawnego działania. Jednym z takich problemów było obliczanie wektorów normalnych powierzchni, co spowodowane było niepoprawnym zastosowaniem wzoru. Błąd ten ujawnił się dopiero po implementacji cieni, gdy oświetlone powierzchnie były przyciemnione, sprawiały wrażenie, że były odwrócone od źródła światła. Defekt ten przedstawia rysunek \ref{fig:normals}.
+Z uwagi na implementację programu na karcie graficznej jako jednostkę cieniującą fragmentów, weryfikacja poprawności jego działania jest znacznie utrudniona. Programując w języku GLSL, brak jest możliwości zastosowania testów jednostkowych, co spowodowało, że testowanie sprowadzało się do działań metodą prób i błędów. Przeprowadzono porównania różnych technik i wzorów, by uzyskać pożądany efekt. Ewentualne niepoprawne obliczenia są często niewidoczne, mimo wydawałoby się poprawnego działania. Jednym z takich problemów było obliczanie wektorów normalnych powierzchni, co spowodowane było niepoprawnym zastosowaniem wzoru. Błąd ten ujawnił się dopiero po implementacji cieni, gdy oświetlone powierzchnie były przyciemnione, sprawiały wrażenie, że były odwrócone od źródła światła. Defekt ten przedstawia rysunek \ref{fig:normals}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{./graf/norm.png}
+\includegraphics[width=0.76\textwidth]{./graf/norm.png}
 \caption{Niepoprawne obliczanie wektorów normalnych.}
 \label{fig:normals}
 \end{figure}
+
+Kolejnym problemem związanym z implementacją programu na karcie graficznej jest utrudniona weryfikacja wydajności zaimplementowanych funkcji ze względu na brak narzędzi przeznaczonych do tego celu. Przykładem takiej sytuacji było renderowanie drzew, które znacząco spowalniało działanie programu.
+Aby wyjaśnić przyczynę tego zjawiska, zaimplementowano wizualizację przybliżonego czasu działania algorytmu raymarching poprzez przedstawienie ilości iteracji algorytmu jako barwę. Przyjęto, że~kolor niebieski oznacza minimalną ilość kroków, a kolor czerwony maksymalną ilość kroków, wyznaczoną przez użytkownika. Wizualizacja tego typu nie jest jednak idealnym odwzorowaniem czasu działania algorytmu, gdyż poszczególne elementy sceny różnią się ilością czasu potrzebnego do wykonania ich obliczeń. Mimo to, taka wizualizacja pozwala~na zdiagnozowanie ewentualnych problemów związanych z~wydajnością algorytmu. Porównanie uzyskanych wyników dla terenu bez drzew oraz z~drzewami, znajduje odzwierciedlenie na rysunku \ref{fig:iters}.
+
+\begin{figure}[H]
+\centering
+\subfloat[Teren bez drzew]{
+  \includegraphics[width=0.5\textwidth]{./graf/iterations-notrees.png}
+%%   \label{fig:lerp}
+}
+\subfloat[Teren oraz drzewa]{
+  \includegraphics[width=0.5\textwidth]{./graf/iterations-trees-unopt.png}
+  \label{fig:iters-tree}
+}
+%% \includegraphics[width=0.65\textwidth]{./graf/plot/bilinear.png}
+\caption{Porównanie ilości kroków renderowania. Kolor czerwony przedstawia 255 iteracji algorytmu.}
+\label{fig:iters}
+\end{figure}
+
+Rysunek \ref{fig:iters-tree} udawadnia, że przy obecnej implementacji większość iteracji wykonywana jest w dużej odległości od kamery, gdzie drzewa są praktycznie niewidoczne. W celu uniknięcia tego efektu ograniczono maksymalną odległość renderowania drzew oraz przyznano użytkownikowi możliwość kontroli nad tym parametrem. Wynik zastosowania powyższej optymalizacji został przedstawiony na~rysunku \ref{fig:iters-opt}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{./graf/iterations-trees-opt.png}
+\caption{Wizualizacja iteracji algorytmu po optymalizacji. Kolor czerwony przedstawia 255 iteracji.}
+\label{fig:iters-opt}
+\end{figure}
+
+
 
 %% \begin{itemize}
 %% \item sposób testowania w ramach pracy (np. odniesienie do modelu V)

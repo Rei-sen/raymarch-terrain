@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.1)  19 DEC 2022 18:51
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.12.25)  12 JAN 2023 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1153,8 +1153,15 @@ rs
 \f@nch@O@olf=\skip89
 \f@nch@O@orf=\skip90
 )
-\c@stronyPozaNumeracja=\count480
 
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 96.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 97.
+
+\c@stronyPozaNumeracja=\count480
 (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
 \integerpart=\count481
@@ -1185,9 +1192,9 @@ Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write5
-runsystem(touch w18-test-202212191131.tex)...disabled (restricted).
+runsystem(touch w18-test-20231121120.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-202212191131.tex)...disabled (restricted).
+runsystem(rm -f w18-test-20231121120.tex)...disabled (restricted).
 
 runsystem(rm -f "main.gnuploterrors")...disabled (restricted).
 
@@ -1348,7 +1355,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
@@ -1362,7 +1369,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \headsep=19.8738pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=88.0pt
+* \marginparwidth=38.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1370,8 +1377,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1445,7 +1452,7 @@ Package biblatex Info: Reference segment=0 on input line 103.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
 * v-part:(T,H,B)=(42.67912pt, 731.23584pt, 71.13188pt)
 * \paperwidth=597.50787pt
@@ -1453,13 +1460,13 @@ Package biblatex Info: Reference segment=0 on input line 103.
 * \textwidth=441.01773pt
 * \textheight=731.23584pt
 * \oddsidemargin=13.08827pt
-* \evensidemargin=-1.1381pt
+* \evensidemargin=13.08827pt
 * \topmargin=-61.46466pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=88.0pt
+* \marginparwidth=38.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1467,8 +1474,8 @@ Package biblatex Info: Reference segment=0 on input line 103.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1509,33 +1516,47 @@ File: graf/politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
  [1
 
 
-]) [2
+]) (./chapters/00.tex
+Underfull \hbox (badness 1609) in paragraph at lines 8--10
+\TU/lmr/m/n/12 w programie. Ponadto pokazano modyfikacje algorytmu raymarching 
+pozwalające
+ []
 
+) [2
 
-] (./chapters/00.tex) [3] [4
 
 ] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
 
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [5])
+) [3
+
+])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [6] (./chapters/01.tex
+ [4]
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 133.
+
+
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 133.
+
+(./chapters/01.tex
 Rozdział 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--21
-\TU/lmr/m/n/12 Działanie metody ray marching, podobnie do metody ray tracing, p
-olega
+Underfull \hbox (badness 7486) in paragraph at lines 10--21
+\TU/lmr/m/n/12 marching dla problemu renderowania trójwymiarowego terenu. Ray m
+arching
  []
 
 
@@ -1548,12 +1569,6 @@ raz realizm
 Underfull \hbox (badness 1297) in paragraph at lines 22--26
 \TU/lmr/m/n/12 wzoru matematycznego, opisującego to przecięcie. Pomimo istnieni
 a analitycznych
- []
-
-
-Underfull \hbox (badness 4403) in paragraph at lines 27--32
-[]\TU/lmr/m/n/12 Alternatywą dla metod analitycznych jest technika ray marching
-. Jest to
  []
 
 [1
@@ -1608,56 +1623,44 @@ zanych
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 7--8
-\TU/lmr/m/n/12 trójkątem siatki dla każdej wiązki światła. Znacznie lepszym i w
-ydajniejszym
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]\TU/lmr/m/n/12 Istnieje wiele technik proceduralnego generowania terenu[[]13[
+]]. Jedną
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 9--12
+Underfull \hbox (badness 2376) in paragraph at lines 9--10
+\TU/lmr/m/n/12 przedstawienie generowanego terenu z wykorzystaniem siatki trójk
+ątów, nie jest
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 11--14
 []\TU/lmr/m/n/12 Do kształtowania terenu w pierwszej kolejności zostanie wykorz
 ystana funkcja
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 9--12
+Underfull \hbox (badness 1019) in paragraph at lines 11--14
 \TU/lmr/m/n/12 ciągłą funkcję, wartość każdego punktu jest interpolowana na pod
 stawie czterech
  []
 
+[3
 
-Overfull \hbox (17.19016pt too wide) detected at line 22
+]
+Overfull \hbox (17.19016pt too wide) detected at line 25
 [][][]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ][]
  []
 
 File: ./graf/ilin-edges.png Graphic file (type bmp)
 <./graf/ilin-edges.png>
-[3
 
-]
-Underfull \hbox (badness 1163) in paragraph at lines 34--35
-\TU/lmr/m/n/12 parametry $\OML/cmm/m/it/12 x$ \TU/lmr/m/n/12 i $\OML/cmm/m/it/1
-2 y$ \TU/lmr/m/n/12 wykorzystując funkcję [][]\TU/lmr/m/it/12 smoothstep[] $\OM
-L/cmm/m/it/12 n$[]\TU/lmr/m/n/12 -tego stopnia przedstawionej
+Underfull \hbox (badness 2591) in paragraph at lines 37--38
+\TU/lmr/m/n/12 jako $\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT
+1/cmr/m/n/12 )$\TU/lmr/m/n/12 . Ostateczną postać funkcji przedstawia wzór []2.
+2[]. Obliczając gradient
  []
-
-File: ./graf/plot/bilinear.png Graphic file (type bmp)
-<./graf/plot/bilinear.png>
-File: ./graf/plot/smooth.png Graphic file (type bmp)
-<./graf/plot/smooth.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-[]\TU/lmr/m/n/10.95 (b) |interpolacja wykorzystująca funkcję
- []
-
-
-Overfull \hbox (23.47202pt too wide) in paragraph at lines 63--69
- [][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1668,15 +1671,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-Underfull \hbox (badness 1275) in paragraph at lines 73--74
-\TU/lmr/m/it/12 Browna[] []\TU/lmr/m/n/12 ([][]\TU/lmr/m/it/12 fractional Brown
-ian motion[][]\TU/lmr/m/n/12 , fBm)[[]6[]][[]5[]]. Pożądany efekt można osiągną
-ć
+File: ./graf/plot/bilinear.png Graphic file (type bmp)
+<./graf/plot/bilinear.png>
+File: ./graf/plot/smooth.png Graphic file (type bmp)
+<./graf/plot/smooth.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\TU/lmr/m/n/10.95 (b) |interpolacja wykorzystująca funkcję
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (23.47202pt too wide) in paragraph at lines 66--72
+ [][][] 
+ []
 
+
+Underfull \hbox (badness 1275) in paragraph at lines 76--77
+\TU/lmr/m/it/12 Browna[] []\TU/lmr/m/n/12 ([][]\TU/lmr/m/it/12 fractional Brown
+ian motion[][]\TU/lmr/m/n/12 , fBm)[[]8[]][[]7[]]. Pożądany efekt można osiągną
+ć
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1687,20 +1701,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-\TU/lmr/m/n/12 Dalsza analiza wygenerowanego terenu wykorzystując interpolację 
-biliniową,
- []
-
-
-Underfull \hbox (badness 2932) in paragraph at lines 124--125
-\TU/lmr/m/n/12 w jednej linii, co wpływa na naturalizm terenu. Aby uniknąć taki
-ej sytuacji
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+\TU/lmr/m/n/12 Dalsza analiza wygenerowanego terenu wykorzystująca interpolację
+ biliniową,
  []
 
 File: ./graf/fbm-bilin.png Graphic file (type bmp)
 <./graf/fbm-bilin.png>
-) (./chapters/03.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1719,6 +1726,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
+File: ./graf/gen-end.png Graphic file (type bmp)
+<./graf/gen-end.png>
+) (./chapters/03.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1727,26 +1737,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8
-
-]
+[8]
 Rozdział 3.
 
 Underfull \hbox (badness 7168) in paragraph at lines 5--6
 []\TU/lmr/m/n/12 Przy realizacji projektu powinny zostać spełnione następujące 
 wymagania
- []
-
-
-Underfull \hbox (badness 5970) in paragraph at lines 9--11
-[]\TU/lmr/m/n/12 Kontrola nad rozdzielczością obrazu - program pozwoli na konfi
-gurację
- []
-
-
-Underfull \hbox (badness 4001) in paragraph at lines 9--11
-\TU/lmr/m/n/12 parametrów związanych z rozdzielczością renderowanego obrazu ora
-z jego
  []
 
 
@@ -1756,12 +1752,14 @@ ch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
-\TU/lmr/m/n/12 obliczonym średnim czasie renderowania pojedynczej klatki oraz i
-lości
+Underfull \hbox (badness 4543) in paragraph at lines 19--21
+\TU/lmr/m/n/12 o obliczonym średnim czasie renderowania pojedynczej klatki oraz
+ ilości
  []
 
-[9]
+[9
+
+]
 Underfull \hbox (badness 1902) in paragraph at lines 30--31
 []\TU/lmr/m/n/12 Wysokiej wydajności, poprzez wykorzystanie potoku programowaln
 ego karty
@@ -1778,15 +1776,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-Underfull \hbox (badness 3058) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 []\TU/lmr/m/n/12 shadertoy.com - strona internetowa umożliwiająca tworzenie pro
-gramów w
+gramów
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
-\TU/lmr/m/n/12 jednostce cieniującej fragmentów. Narzędzie zostało wykorzystane
- do
+\TU/lmr/m/n/12 w jednostce cieniującej fragmentów. Narzędzie zostało wykorzysta
+ne
  []
 
 ) (./chapters/04.tex
@@ -1799,17 +1797,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12
-
-]
 Rozdział 4.
 
 Underfull \hbox (badness 1082) in paragraph at lines 6--8
@@ -1823,29 +1810,25 @@ Underfull \hbox (badness 4621) in paragraph at lines 6--8
 ersji 3.3.
  []
 
-
-Underfull \hbox (badness 2837) in paragraph at lines 15--17
-[]\TU/lmr/m/n/12 Projekt został skompilowany i przetestowany wykorzystując komp
-ilator g++
- []
-
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-LaTeX Font Info:    Trying to load font information for TU+fvm on input line 23
+LaTeX Font Info:    Trying to load font information for TU+fvm on input line 24
 .
-LaTeX Font Info:    No file TUfvm.fd. on input line 23.
+LaTeX Font Info:    No file TUfvm.fd. on input line 24.
 
 
 LaTeX Font Warning: Font shape `TU/fvm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 23.
+(Font)              using `TU/lmr/m/n' instead on input line 24.
 
-[13]
-Underfull \hbox (badness 1412) in paragraph at lines 42--44
-\TU/fvm/m/n/12 projektu. Generacji plików reguł Makefile można dokonać wywołują
+[12
+
+]
+Underfull \hbox (badness 1412) in paragraph at lines 44--46
+\TU/lmr/m/n/12 projektu. Generacji plików reguł Makefile można dokonać wywołują
 c następujące
  []
 
@@ -1859,23 +1842,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
+[13]
 File: ./graf/cmake-win.png Graphic file (type bmp)
 <./graf/cmake-win.png>
 
-Underfull \hbox (badness 1577) in paragraph at lines 82--88
-[]\TU/fvm/m/n/12 Następnie należy uruchomić narzędzie CMake w trybie graficznym
-. Kolejnym
- []
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-Underfull \hbox (badness 2318) in paragraph at lines 82--88
-\TU/fvm/m/n/12 interesujące nas) docelowe środowisko programistyczne. Rysunek [
-]4.3[] przedstawia
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
+Underfull \hbox (badness 3364) in paragraph at lines 87--88
+[]\TU/fvm/m/n/12 Kolejnym etapem jest konfiguracja systemu budowy, której można
+ dokonać
  []
 
 File: ./graf/cmake-conf.png Graphic file (type bmp)
 <./graf/cmake-conf.png>
+
+Underfull \hbox (badness 1173) in paragraph at lines 96--98
+[]\TU/fvm/m/n/12 Następnie należy wygenerować pliki budowy, wykorzystując przyc
+isk [][]\TU/lmr/m/it/12 Generate[][]\TU/fvm/m/n/12 .
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1885,12 +1877,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
-Underfull \hbox (badness 1448) in paragraph at lines 96--98
-[]\TU/fvm/m/n/12 Następnie należy wygenerować pliki budowy wykorzystując przyci
-sk [][]\TU/lmr/m/it/12 Generate[][]\TU/fvm/m/n/12 .
- []
-
-
 Underfull \hbox (badness 1721) in paragraph at lines 100--105
 []\TU/fvm/m/n/12 Po uruchomieniu program przedstawia prosty interfejs użytkowni
 ka, widoczny
@@ -1914,6 +1900,8 @@ Underfull \hbox (badness 1442) in paragraph at lines 100--105
 2 Show UI Help[][]\TU/fvm/m/n/12 . Program można
  []
 
+File: ./graf/ui.png Graphic file (type bmp)
+<./graf/ui.png>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1923,8 +1911,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-File: ./graf/ui.png Graphic file (type bmp)
-<./graf/ui.png>
+Underfull \hbox (badness 1603) in paragraph at lines 140--141
+[]\TU/fvm/m/n/12 Layer rotation - Obrócenie współrzędnych punktu dla każdej war
+stwy
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1935,6 +1925,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
+Underfull \hbox (badness 1515) in paragraph at lines 185--186
+[]\TU/fvm/m/n/12 Render raymarching iterations - wyświetlenie wizualizacji iter
+acji algorytmu
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1953,6 +1948,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
+Rozdział 5.
+
+Underfull \hbox (badness 7759) in paragraph at lines 5--7
+[]\TU/fvm/m/n/12 Do realizacji projektu wykorzystano język C++ oraz bibliotekę 
+OpenGL.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+\TU/fvm/m/n/12 graficznej. W pierwszej kolejności następuje utworzenie okna pro
+gramu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+[]\TU/fvm/m/n/12 Informacje o konfiguracji przekazywane są do jednostek cieniuj
+ących
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 15--16
+\TU/fvm/m/n/12 renderowania odbywa się w jednostce cieniującej fragmentów. Pier
+wszym etapem
+ []
+
+[20
+
+]
+Underfull \hbox (badness 2443) in paragraph at lines 26--27
+[]\TU/fvm/m/n/12 W programie jedną najważniejszych jest klasa [][]\TU/lmr/m/it/
+12 Application[][]\TU/fvm/m/n/12 , która odpowiada
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 51--52
+\TU/fvm/m/n/12 oraz ich połączenie. Ponadto umożliwia przekazywanie konfiguracj
+i do jednostek
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1961,43 +1995,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20
-
-]
-Rozdział 5.
-
-Underfull \hbox (badness 1629) in paragraph at lines 5--7
-[]\TU/fvm/m/n/12 Do realizacji projektu wykorzystano język C++ oraz bibliotekę 
-OpenGL. Do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--7
-\TU/fvm/m/n/12 graficznej. W pierwszej kolejności następuje utworzenie okna pro
-gramu z
- []
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 5--7
-\TU/fvm/m/n/12 wykorzystaniu biblioteki GLAD i rozpoczęcie głównej pętli progra
-mu, w której
- []
-
-
-Underfull \hbox (badness 5302) in paragraph at lines 15--16
-[]\TU/fvm/m/n/12 Informacje o konfiguracji przekazywane są do jednostek cieniuj
-ących przy
- []
-
 [21]
-Underfull \hbox (badness 1931) in paragraph at lines 50--51
-\TU/fvm/m/n/12 oraz ich połączenie. Ponadto umożliwia przekazywanie konfiguracj
-i do jednostek
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
+[]\TU/fvm/m/n/12 Algorytm [][]\TU/lmr/m/it/12 raymarching[] []\TU/fvm/m/n/12 je
+st najważniejszym z algorytmów wykorzystanych
  []
 
 
-Underfull \vbox (badness 2359) has occurred while \output is active []
-
+Underfull \hbox (badness 6625) in paragraph at lines 107--111
+\TU/fvm/m/n/12 parametry, którymi są początkowa pozycja wiązki światła oraz jej
+ kierunek.
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2008,15 +2016,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
-Underfull \hbox (badness 3396) in paragraph at lines 105--109
-[]\TU/fvm/m/n/12 Algorytm [][]\TU/lmr/m/it/12 raymarching[] []\TU/fvm/m/n/12 je
-st najważniejszym z algorytmów wykorzystanych w
- []
-
-
-Underfull \hbox (badness 3128) in paragraph at lines 105--109
-\TU/fvm/m/n/12 końcowy wynik to odległość, którą musi przebyć wiązka by preciąć
- najbliższą
+Underfull \hbox (badness 2080) in paragraph at lines 138--140
+\TU/fvm/m/n/12 cieni przy niewielkim koszcie obliczeń [[]12[]]. Rysunek []5.5[]
+ przedstawia pseudokod
  []
 
 
@@ -2028,6 +2030,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
+File: ./graf/shadow.png Graphic file (type bmp)
+<./graf/shadow.png>
+File: ./graf/shadowsmooth.png Graphic file (type bmp)
+<./graf/shadowsmooth.png>
+
+Overfull \hbox (15.64801pt too wide) in paragraph at lines 179--184
+ [][][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2037,18 +2048,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-File: ./graf/shadow.png Graphic file (type bmp)
-<./graf/shadow.png>
-File: ./graf/shadowsmooth.png Graphic file (type bmp)
-<./graf/shadowsmooth.png>
+File: ./graf/clouds.png Graphic file (type bmp)
+<./graf/clouds.png>
 
-Overfull \hbox (15.64801pt too wide) in paragraph at lines 178--183
- [][][] 
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[]\TU/fvm/m/n/12 Rysunek 5.8: |Pseudokod modyfikacji algorytmu [][]\TU/lmr/m/it
+/12 raymarching[] []\TU/fvm/m/n/12 wykorzystany
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2076,15 +2082,9 @@ dnostkę
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 4--5
-\TU/fvm/m/n/12 co spowodowało, że testowanie sprowadzało się do metody prób i b
-łędów.
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 4--5
-\TU/fvm/m/n/12 Ewentualne niepoprawne obliczenia są często niewidoczne mimo wyd
-awało by się
+Underfull \hbox (badness 1874) in paragraph at lines 4--5
+\TU/fvm/m/n/12 Ewentualne niepoprawne obliczenia są często niewidoczne, mimo wy
+dawałoby się
  []
 
 
@@ -2096,12 +2096,79 @@ wektorów
 File: ./graf/norm.png Graphic file (type bmp)
 <./graf/norm.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1902) in paragraph at lines 13--15
+\TU/fvm/m/n/12 zjawiska, zaimplementowano wizualizację przybliżonego czasu dzia
+łania algorytmu
+ []
 
- [27
 
-])
-(./chapters/07.tex
+Underfull \hbox (badness 1953) in paragraph at lines 13--15
+\TU/fvm/m/n/12 kroków, wyznaczoną przez użytkownika. Wizualizacja tego typu nie
+ jest jednak
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 13--15
+\TU/fvm/m/n/12 różnią się ilością czasu potrzebnego do wykonania ich obliczeń. 
+Mimo to, taka
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+\TU/fvm/m/n/12 wizualizacja pozwala na zdiagnozowanie ewentualnych problemów zw
+iązanych
+ []
+
+[27
+
+]
+File: ./graf/iterations-notrees.png Graphic file (type bmp)
+<./graf/iterations-notrees.png>
+File: ./graf/iterations-trees-unopt.png Graphic file (type bmp)
+<./graf/iterations-trees-unopt.png>
+
+Overfull \hbox (19.56001pt too wide) in paragraph at lines 21--27
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 31--32
+[]\TU/fvm/m/n/12 Rysunek []6.2b[] udawadnia, że przy obecnej implementacji więk
+szość iteracji
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 31--32
+\TU/fvm/m/n/12 wykonywana jest w dużej odległości od kamery, gdzie drzewa są pr
+aktycznie
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 31--32
+\TU/fvm/m/n/12 niewidoczne. W celu uniknięcia tego efektu ograniczono maksymaln
+ą odległość
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 31--32
+\TU/fvm/m/n/12 renderowania drzew oraz przyznano użytkownikowi możliwość kontro
+li nad tym
+ []
+
+
+Underfull \hbox (badness 5578) in paragraph at lines 31--32
+\TU/fvm/m/n/12 parametrem. Wynik zastosowania powyższej optymalizacji został pr
+zedstawiony
+ []
+
+File: ./graf/iterations-trees-opt.png Graphic file (type bmp)
+<./graf/iterations-trees-opt.png>
+
+Underfull \hbox (badness 3168) in paragraph at lines 36--36
+[]\TU/fvm/m/n/12 Rysunek 6.3: |Wizualizacja iteracji algorytmu po optymalizacji
+. Kolor czerwony
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2110,18 +2177,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28]
+[28]) (./chapters/07.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
 Rozdział 7.
 
-Underfull \hbox (badness 1735) in paragraph at lines 2--4
-\TU/fvm/m/n/12 tworzenie skomplikowanych scen, poprzez zastosowanie kombinacji 
-wielu prostych
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 7--8
+Underfull \hbox (badness 7685) in paragraph at lines 7--8
 []\TU/fvm/m/n/12 Nałożenie na siebie wielu takich siatek, o zróżnicowanej częst
-otliwości oraz
+otliwości
  []
 
 
@@ -2131,9 +2201,15 @@ Underfull \hbox (badness 1728) in paragraph at lines 10--11
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-\TU/fvm/m/n/12 przykład poprzez generację struktur takich jak jęziora, rzeki, k
-onstrukcje
+Underfull \hbox (badness 4634) in paragraph at lines 12--14
+[]\TU/fvm/m/n/12 Przedstawiony projekt można wzbogacić o dodatkowe elementy kra
+jobrazu,
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 12--14
+\TU/fvm/m/n/12 na przykład poprzez generację struktur takich jak jeziora, rzeki
+, konstrukcje
  []
 
 
@@ -2143,12 +2219,24 @@ anie bardziej
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 15--16
-\TU/fvm/m/n/12 znacząco utrudniło debugowanie programu. Przykładem takiej sytua
-cji był, przez
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+\TU/fvm/m/n/12 zastosowane techniki pozwalające ograniczyć efekty spowodowane [
+][]\TU/lmr/m/it/12 aliasingiem[][]\TU/fvm/m/n/12 ,
  []
 
-[29
+
+Underfull \hbox (badness 2591) in paragraph at lines 15--16
+[]\TU/fvm/m/n/12 Przy tworzeniu programu napotkano wiele problemów, które międz
+y innymi
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 15--16
+\TU/fvm/m/n/12 znacząco utrudniło debugowanie programu. Przykładem takiej sytua
+cji był przez
+ []
+
+[30
 
 ])
 
@@ -2159,27 +2247,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 163--163
 \TU/lmr/m/it/12 Version 4.60.7\TU/fvm/m/n/12 . 2019. \TU/lmr/m/sc/12 url\TU/fvm
 /m/n/12 :
  []
 
-[31
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [32
 
-] [33] [34] (./chapters/08.tex) (./chapters/09.tex [35
 
 ]
 
@@ -2190,66 +2265,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36
+[33] [34
 
-]) (./chapters/10.tex [37]
+] (./chapters/08.tex) (./chapters/10.tex [35
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+]) [36
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+] (./main.lof
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+ [][] [][]\TU/fvm/m/n/12 Pseudokod modyfikacji algorytmu [][]\TU/lmr/m/it/12 ra
+ymarching[] []\TU/fvm/m/n/12 wykorzystany 
+ []
 
-[38
 
-]) [39]
+Underfull \hbox (badness 4940) in paragraph at lines 115--115
+ [][] [][]\TU/fvm/m/n/12 Wizualizacja iteracji algorytmu po optymalizacji. Kolo
+r czerwony 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[40
-
-] (./main.lof)
+)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [41]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[42
+ [37
 
 ] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [43] (./main.aux)
+ [38
+
+] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3E3E474FFF77532EDA0474CDCE06639D;4605.
+(rerunfilecheck)             Checksum: 6324E7E2187CEE45B25FD2270611F436;4242.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50204 strings out of 476156
- 1118520 string characters out of 5814963
- 1998650 words of memory out of 5000000
- 70145 multiletter control sequences out of 15000+600000
+ 50284 strings out of 476156
+ 1120635 string characters out of 5814962
+ 2034431 words of memory out of 5000000
+ 70223 multiletter control sequences out of 15000+600000
  477527 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,92p,1914b,5687s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,15n,92p,1914b,5686s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (49 pages).
+Output written on main.pdf (42 pages).

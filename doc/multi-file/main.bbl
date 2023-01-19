@@ -17,6 +17,25 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global}
+  \entry{bib:ptg}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=AT}{%
+         family={Archer},
+         familyi={A\bibinitperiod},
+         given={Travis},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AT1}
+    \strng{fullhash}{AT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Procedurally Generating Terrain}
+    \field{year}{2011}
+  \endentry
+
   \entry{bib:spheretracing}{article}{}
     \name{author}{1}{}{%
       {{hash=HJ}{%
@@ -112,6 +131,44 @@
     \field{urlday}{19}
     \field{urlmonth}{12}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:phys}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=MX}{%
+         family={Mei},
+         familyi={M\bibinitperiod},
+         given={Xing},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Decaudin},
+         familyi={D\bibinitperiod},
+         given={Philippe},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HBG}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Bao-Gang},
+         giveni={B\bibinithyphendelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MXDPHBG1}
+    \strng{fullhash}{MXDPHBG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1109/PG.2007.15
+    \endverb
+    \field{isbn}{978-0-7695-3009-3}
+    \field{pages}{47 \bibrangedash  56}
+    \field{title}{Fast Hydraulic Erosion Simulation and Visualization on GPU}
+    \field{journaltitle}{Pacific Graphics}
+    \field{month}{10}
+    \field{year}{2007}
   \endentry
 
   \entry{bib:Musgrave2003ProceduralFT}{inproceedings}{}
@@ -263,6 +320,80 @@
     \field{urlday}{09}
     \field{urlmonth}{12}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{bib:aaptg}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=RT}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Bakaoukas},
+         familyi={B\bibinitperiod},
+         given={Anastasios},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RTBA1}
+    \strng{fullhash}{RTBA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1109/VS-GAMES.2016.7590336
+    \endverb
+    \field{pages}{1\bibrangedash 2}
+    \field{title}{Algorithms and Approaches for Procedural Terrain Generation -
+  A Brief Review of Current Techniques}
+    \field{month}{09}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:evo}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=TJ}{%
+         family={Togelius},
+         familyi={T\bibinitperiod},
+         given={Julian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YG}{%
+         family={Yannakakis},
+         familyi={Y\bibinitperiod},
+         given={Georgios},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stanley},
+         familyi={S\bibinitperiod},
+         given={Kenneth},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Browne},
+         familyi={B\bibinitperiod},
+         given={Cameron},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TJ+1}
+    \strng{fullhash}{TJYGSKBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1007/978-3-642-12239-2_15
+    \endverb
+    \field{isbn}{978-3-642-12238-5}
+    \field{pages}{141\bibrangedash 150}
+    \field{title}{Search-Based Procedural Content Generation}
+    \field{month}{04}
+    \field{year}{2010}
   \endentry
 \enddatalist
 \endinput

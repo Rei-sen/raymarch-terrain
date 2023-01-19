@@ -36,10 +36,30 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Wynik zastosowania {\selectlanguage {british}\emph {fBm}} dla 10 oktaw, z wykorzystaniem interpolacji biliniowej.\relax }}{7}{figure.caption.12}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Końcowy efekt kształtowania terenu.\relax }}{8}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram przypadków użycia.\relax }}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram przypadków użycia.\relax }}{10}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio.\relax }}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Instalacja wsparcia systemu CMake w instalatorze środowiska Visual Studio.\relax }}{14}{figure.caption.17}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wybór folderu projektu oraz folderu budowy narzędziu graficznym CMake.\relax }}{15}{figure.caption.19}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Konfiguracja środowiska programistycznego.\relax }}{15}{figure.caption.20}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Interfejs użytkownika\relax }}{16}{figure.caption.21}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
@@ -48,63 +68,6 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Wybór folderu projektu oraz folderu budowy narzędziu graficznym CMake.\relax }}{16}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Interpolacja biliniowa w programie.\relax }}{16}{figure.caption.17}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Interfejs użytkownika\relax }}{17}{figure.caption.18}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\addvspace {10\p@ }
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Application}}.\relax }}{22}{figure.caption.19}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Renderer}}.\relax }}{23}{figure.caption.20}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Renderer}}.\relax }}{23}{figure.caption.21}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Pseudokod algorytmu renderowania metodą {\selectlanguage {british}\emph {raymarching}}.\relax }}{24}{figure.caption.22}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Pseudokod modyfikacji algorytmu {\selectlanguage {british}\emph {raymarching}} wykorzystany do obliczenia cieni.\relax }}{25}{figure.caption.23}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Porównanie wyników metod renderowania cieni\relax }}{26}{figure.caption.24}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Niepoprawne obliczanie wektorów normalnych.\relax }}{28}{figure.caption.25}%
-\addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
@@ -118,8 +81,51 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Application}}.\relax }}{21}{figure.caption.22}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Renderer}}.\relax }}{22}{figure.caption.23}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Deklaracja klasy {\selectlanguage {british}\emph {Renderer}}.\relax }}{22}{figure.caption.24}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Pseudokod algorytmu renderowania metodą {\selectlanguage {british}\emph {raymarching}}.\relax }}{23}{figure.caption.25}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Pseudokod modyfikacji algorytmu {\selectlanguage {british}\emph {raymarching}} wykorzystany do obliczenia cieni.\relax }}{24}{figure.caption.26}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Porównanie wyników metod renderowania cieni\relax }}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Renderowanie chmur.\relax }}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Pseudokod modyfikacji algorytmu {\selectlanguage {british}\emph {raymarching}} wykorzystany do~renderowania chmur.\relax }}{26}{figure.caption.29}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Niepoprawne obliczanie wektorów normalnych.\relax }}{27}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Porównanie ilości kroków renderowania. Kolor czerwony przedstawia 255 iteracji algorytmu.\relax }}{28}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Wizualizacja iteracji algorytmu po optymalizacji. Kolor czerwony przedstawia 255 iteracji.\relax }}{29}{figure.caption.32}%
 \addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 

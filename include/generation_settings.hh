@@ -25,6 +25,7 @@ struct GenerationSettings {
 
   bool enableTrees = false;
   int treesMaxSteps = 100;
+  float maxTreeDist = 50.0;
   float treeSpacing = 0.07;
   float treeRadius = 0.02;
   float treeHeight = 0.08;
